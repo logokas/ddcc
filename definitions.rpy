@@ -6,7 +6,7 @@
 #If you plan on adding new content, pop them over down there and mimic the appropriate lines!
 define persistent.demo = False
 define persistent.steam = False
-define config.developer = False #Change this flag to True to enable dev tools
+define config.developer = True #DON'T COMMIT THIS AS TRUE. PLEASE. #Change this flag to True to enable dev tools
 
 python early:
     import singleton
@@ -102,6 +102,7 @@ define audio.closet_open = "sfx/closet-open.ogg"
 define audio.closet_close = "sfx/closet-close.ogg"
 define audio.page_turn = "sfx/pageflip.ogg"
 define audio.fall = "sfx/fall.ogg"
+define audio.stalker = "utsounds/stalker.ogg"
 
 # Backgrounds
 image black = "#000000"
@@ -134,6 +135,9 @@ image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
 image bg house = "bg/house.png"
 image bg kitchen = "bg/kitchen.png"
+
+image bg stalker_bg = "bg/stalker.png"
+image bg stalker_bg2 = "bg/stalker2.png"
 
 image bg notebook = "bg/notebook.png"
 image bg notebook-glitch = "bg/notebook-glitch.png"
@@ -453,6 +457,32 @@ image sayori glitch:
     "sayori/glitch2.png"
     pause 0.01666
     repeat
+
+image sayori 6 = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/a.png")
+image sayori 6b = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/b.png")
+image sayori 6c = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/c.png")
+image sayori 6d = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/d.png")
+image sayori 6e = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/e.png")
+image sayori 6f = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/f.png")
+image sayori 6g = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/g.png")
+image sayori 6h = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/h.png")
+image sayori 6i = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/i.png")
+image sayori 6j = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/j.png")
+image sayori 6k = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/k.png")
+image sayori 6l = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/l.png")
+image sayori 6m = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/m.png")
+image sayori 6n = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/n.png")
+image sayori 6o = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/o.png")
+image sayori 6p = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/p.png")
+image sayori 6q = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/q.png")
+image sayori 6r = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/r.png")
+image sayori 6s = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/s.png")
+image sayori 6t = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/t.png")
+image sayori 6u = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/u.png")
+image sayori 6v = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/v.png")
+image sayori 6w = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/w.png")
+image sayori 6x = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/x.png")
+image sayori 6y = im.Composite((960, 960), (0, 0), "sayori/4.png", (0, 0), "sayori/y.png")
 
 # Natsuki
 image natsuki 11 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")

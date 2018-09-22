@@ -8,8 +8,8 @@ label start:
 screen scenechoice1:
    imagebutton idle "corridor_date" action [SetVariable('jumpLabel','chaos'), Jump(label="cleanJump")]  xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "Chaos" xcenter .42 ycenter .317 style "monika_text"
-   imagebutton idle "corridor_date" xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "Third floor" xcenter .6 ycenter .317 style "monika_text"
+   imagebutton idle "corridor_date" action [SetVariable('jumpLabel','stalker'), Jump(label="cleanJump")] xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text "Stalker" xcenter .6 ycenter .317 style "monika_text"
    imagebutton idle "class_date" xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "2-A Classroom" xcenter .42 ycenter .571 style "monika_text"
    imagebutton idle "class_date" xcenter .6 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
