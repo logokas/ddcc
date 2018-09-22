@@ -6,7 +6,7 @@
 #If you plan on adding new content, pop them over down there and mimic the appropriate lines!
 define persistent.demo = False
 define persistent.steam = False
-define config.developer = True #DON'T COMMIT THIS AS TRUE. PLEASE. #Change this flag to True to enable dev tools
+define config.developer = False #Change this flag to True to enable dev tools
 
 python early:
     import singleton
