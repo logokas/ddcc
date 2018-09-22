@@ -2,6 +2,7 @@
 # Should not include any actual events or scripting; only logic and calling other labels.
 
 label start:
+    stop music fadeout 1.5
     call chaos from _call_chaos
 
 screen scenechoice1:
