@@ -74,32 +74,32 @@ label stalker:
     y 3so "...."
     y "..."
     show yuri at t41
-    show monika 1h at t44
+    show monika 1sh at t44
     m "..."
     show yuri 3sp
-    m 2i "Kakogo cherta ty zdes' delayesh'?"
+    m 2si "Kakogo cherta ty zdes' delayesh'?"
     y 2sq "I'm sorry, I don't speak Markov!"
     $ m_name = 'Monika'
-    show monika 1c
+    show monika 1sc
     m "..."
     show yuri 2ss
-    m 1d "I see."
-    m 1a "Are you traveling alone, or in a group?"
+    m 1sd "I see."
+    m 1sa "Are you traveling alone, or in a group?"
     y 2st "Loner..."
-    show monika 1e
+    show monika 1se
     y "I..."
     y "I'm alone..."
     play sound "utsounds/army3.ogg"
-    m 3k "Perfect!"
-    show monika 3j
+    m 3sk "Perfect!"
+    show monika 3sj
     y 2sq "Ahaha..."
     y "How so...?"
-    m 1a "Say goodbye."
+    m 1sa "Say goodbye."
     y 1se "Goodbye?"
     y "But I just got here..."
     play sound "utsounds/shotgun2.ogg"
-    m 1e "I know, Yuri."
-    m 1j "I know..."
+    m 1se "I know, Yuri."
+    m 1sj "I know..."
     stop music
     stop sound
     show yuri at t11
