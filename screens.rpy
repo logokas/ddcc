@@ -425,11 +425,11 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 init python:
-    def FinishEnterName():
+    def FinishEnterName(next_scene_name):
         if not player: return
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("start")
+        renpy.jump_out_of_context(next_scene_name)
 
 screen navigation():
 
@@ -446,11 +446,11 @@ screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
                 else:
-                    textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
 
-                    textbutton _("Play") action Jump("choose")
+                    textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
 
             else:
 
