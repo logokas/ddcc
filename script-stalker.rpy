@@ -115,28 +115,28 @@ label stalker:
     y "Am I dead?"
     scene bg stalker_bg
     with dissolve_scene_full
-    show sayori 4a at t22
+    show sayori 4sa at t22
     show yuri 3w at t21
     s "Are you alright?"
     y 3n "..."
     y "..."
-    show sayori 3n
+    show sayori 3sn
     y 3s "You saved me..."
-    s 3m "I did?"
+    s 3sm "I did?"
     y "Thank you..."
     show yuri 2n
-    s 4p "I shot the army!!!!"
-    s 1w "I thought it was a bandit!!!"
-    show sayori 1u
+    s 4sp "I shot the army!!!!"
+    s 1sw "I thought it was a bandit!!!"
+    show sayori 1su
     y 1t "Well..."
     y "...No matter..."
     y "At least we're safe now."
-    s 2y "I actually don't have any bullets left."
+    s 2sy "I actually don't have any bullets left."
     y 1f "Oh?"
     y 1a "Well what's the worst that can happen?"
     play sound "utsounds/breeki.ogg"
     show yuri 2n
-    show sayori 4n
+    show sayori 4sn
     n "Anu cheeki breeki iv damke!"
     scene black
     stop music
