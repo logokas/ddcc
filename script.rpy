@@ -6,6 +6,7 @@ label start:
     call chaos from _call_chaos
     #TODO: Call scene transition
     call stalker from _call_stalker
+    return
 
 screen scenechoice1:
    imagebutton idle "corridor_date" action [SetVariable('jumpLabel','chaos'), Jump(label="cleanJump")]  xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
