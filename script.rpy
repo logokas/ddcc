@@ -6,6 +6,10 @@ label start:
     call chaos from _call_chaos
     #TODO: Call scene transition
     call stalker from _call_stalker
+    #TODO: Call scene transition
+    call ddlc_abridged from _call_abridged
+    #TODO: Call scene transition
+    call backups from _call_backups
     return
 
 screen scenechoice1:
