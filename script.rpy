@@ -10,6 +10,8 @@ label start:
     call ddlc_abridged from _call_abridged
     #TODO: Call scene transition
     call backups from _call_backups
+    #TODO: Call scene transition
+    call ddcc from _call_ddcc
     return
 
 screen scenechoice1:
@@ -23,8 +25,8 @@ screen scenechoice1:
    text "Good thing she keeps backups" xcenter .6 ycenter .571 style "monika_text"
    imagebutton idle "class_date" xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "2-C Classroom" xcenter .42 ycenter .826 style "monika_text"
-   imagebutton idle "club_date" xcenter .6 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "Literature Club" xcenter .6 ycenter .826 style "monika_text"
+   imagebutton idle "club_date" action [SetVariable('jumpLabel','ddcc'), Jump(label="cleanJump")] xcenter .6 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text "What is DDCC?" xcenter .6 ycenter .826 style "monika_text"
    textbutton "Next >>>" action Jump("Choice1") xcenter .64 ycenter .95 style "monika_text" hover_sound "gui/sfx/hover.ogg" activate_sound "sfx/pageflip.ogg"
 
 
