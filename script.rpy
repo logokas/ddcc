@@ -11,6 +11,8 @@ label start:
     #TODO: Call scene transition
     call backups from _call_backups
     #TODO: Call scene transition
+    call under_new_management from _call_management
+    #TODO: Call scene transition
     call ddcc from _call_ddcc
     return
 
@@ -23,8 +25,8 @@ screen scenechoice1:
    text "DDLC Abridged" xcenter .42 ycenter .571 style "monika_text"
    imagebutton idle "class_date" action [SetVariable('jumpLabel','backups'), Jump(label="cleanJump")] xcenter .6 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "Good thing she keeps backups" xcenter .6 ycenter .571 style "monika_text"
-   imagebutton idle "class_date" xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "2-C Classroom" xcenter .42 ycenter .826 style "monika_text"
+   imagebutton idle "class_date" action [SetVariable('jumpLabel','under_new_management'), Jump(label="cleanJump")] xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text "Under New Management" xcenter .42 ycenter .826 style "monika_text"
    imagebutton idle "club_date" action [SetVariable('jumpLabel','ddcc'), Jump(label="cleanJump")] xcenter .6 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "What is DDCC?" xcenter .6 ycenter .826 style "monika_text"
    textbutton "Next >>>" action Jump("Choice1") xcenter .64 ycenter .95 style "monika_text" hover_sound "gui/sfx/hover.ogg" activate_sound "sfx/pageflip.ogg"
