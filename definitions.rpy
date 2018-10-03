@@ -145,6 +145,8 @@ image bg notebook-glitch = "bg/notebook-glitch.png"
 image class_date = im.FactorScale("bg/class.png", 0.15, 0.15)
 image corridor_date = im.FactorScale("bg/corridor.png", 0.15, 0.15)
 image club_date = im.FactorScale("bg/club.png", 0.15, 0.15)
+image residential_day_date = im.FactorScale("bg/residential.png", 0.15, 0.15)
+image stalker_date = im.FactorScale("bg/stalker.png", 0.15, 0.15)
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
