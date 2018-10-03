@@ -3,6 +3,8 @@
 
 label start:
     stop music fadeout 1.5
+    call ddcc from _call_ddcc
+    #TODO: Call scene transition
     call chaos from _call_chaos
     #TODO: Call scene transition
     call stalker from _call_stalker
@@ -10,23 +12,21 @@ label start:
     call ddlc_abridged from _call_abridged
     #TODO: Call scene transition
     call backups from _call_backups
-    #TODO: Call scene transition
-    call ddcc from _call_ddcc
     return
 
 screen scenechoice1:
-   imagebutton idle "corridor_date" action [SetVariable('jumpLabel','chaos'), Jump(label="cleanJump")]  xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "Chaos" xcenter .42 ycenter .317 style "monika_text"
-   imagebutton idle "corridor_date" action [SetVariable('jumpLabel','stalker'), Jump(label="cleanJump")] xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "Stalker" xcenter .6 ycenter .317 style "monika_text"
-   imagebutton idle "class_date" action [SetVariable('jumpLabel','ddlc_abridged'), Jump(label="cleanJump")] xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "DDLC Abridged" xcenter .42 ycenter .571 style "monika_text"
-   imagebutton idle "class_date" action [SetVariable('jumpLabel','backups'), Jump(label="cleanJump")] xcenter .6 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "Good thing she keeps backups" xcenter .6 ycenter .571 style "monika_text"
-   imagebutton idle "class_date" xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "2-C Classroom" xcenter .42 ycenter .826 style "monika_text"
-   imagebutton idle "club_date" action [SetVariable('jumpLabel','ddcc'), Jump(label="cleanJump")] xcenter .6 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "What is DDCC?" xcenter .6 ycenter .826 style "monika_text"
+   imagebutton idle skits[0].thumbnail action [SetVariable('jumpLabel',skits[0].call_label), Jump(label="cleanJump")]  xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[0].name xcenter .42 ycenter .317 style "monika_text"
+   imagebutton idle skits[1].thumbnail action [SetVariable('jumpLabel',skits[1].call_label), Jump(label="cleanJump")] xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[1].name xcenter .6 ycenter .317 style "monika_text"
+   imagebutton idle skits[2].thumbnail action [SetVariable('jumpLabel',skits[2].call_label), Jump(label="cleanJump")] xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[2].name xcenter .42 ycenter .571 style "monika_text"
+   imagebutton idle skits[3].thumbnail action [SetVariable('jumpLabel',skits[3].call_label), Jump(label="cleanJump")] xcenter .6 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[3].name xcenter .6 ycenter .571 style "monika_text"
+   imagebutton idle skits[4].thumbnail action [SetVariable('jumpLabel',skits[4].call_label), Jump(label="cleanJump")] xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[4].name xcenter .42 ycenter .826 style "monika_text"
+   imagebutton idle skits[5].thumbnail action [SetVariable('jumpLabel',skits[5].call_label), Jump(label="cleanJump")] xcenter .6 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[5].name xcenter .6 ycenter .826 style "monika_text"
    textbutton "Next >>>" action Jump("Choice1") xcenter .64 ycenter .95 style "monika_text" hover_sound "gui/sfx/hover.ogg" activate_sound "sfx/pageflip.ogg"
 
 
