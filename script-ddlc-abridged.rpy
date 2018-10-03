@@ -69,16 +69,18 @@ label ddlc_abridged:
     show monika 3l at f44
     m "Uhh...look! A distraction!"
     mc "Where!?"
+    $ srf = screenshot_srf()
     show screen tear(8, offtimeMult=1, ontimeMult=10)
+    hide yuri
+    hide s_kill
+    hide natsuki
+    hide monika
     play sound "sfx/s_kill_glitch1.ogg"
-    #hide yuri
-    #hide s_kill2
-    #hide natsuki
     pause 1.0
     
+    scene bg class_day
     hide screen tear
     
-    scene bg class_day
     stop music
     play music t2
     
@@ -148,8 +150,10 @@ label ddlc_abridged:
     stop sound
     hide blood
     hide blood2
-    hide yuri
     play sound fall
+    pause 0.2
+    hide yuri
+    
     
     mc "...Aaaand she's dead.  Huh.  Didn't see that one coming."
     mc "I could be wrong though.  I better stare at her in case she's trying to trick me."

@@ -1,4 +1,4 @@
-##"Under New Management" by Chronos
+##"Under New Management" by Chronos#1609
 label under_new_management:
     
     scene bg club_day
