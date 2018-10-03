@@ -12,6 +12,10 @@ label start:
     call ddlc_abridged from _call_abridged
     #TODO: Call scene transition
     call backups from _call_backups
+    #TODO: Call scene transition
+    call under_new_management from _call_management
+    #TODO: Call scene transition
+    call stop from _call_stop
     return
 
 screen scenechoice1:
@@ -31,8 +35,8 @@ screen scenechoice1:
 
 
 screen scenechoice2:
-   imagebutton idle "corridor_date" xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "First floor" xcenter .42 ycenter .317 style "monika_text"
+   imagebutton idle "club_date" action [SetVariable('jumpLabel','stop'), Jump(label="cleanJump")] xcenter .42 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text "STOP" xcenter .42 ycenter .317 style "monika_text"
    imagebutton idle "corridor_date" xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "Third floor" xcenter .6 ycenter .317 style "monika_text"
    imagebutton idle "class_date" xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
