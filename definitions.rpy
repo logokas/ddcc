@@ -1689,3 +1689,22 @@ default sayori_confess = True
 
 # We read Natsuki's confession poem in chapter 23.
 default natsuki_23 = None
+
+init python:
+    class Skit:
+        def __init__(self, name, call_label, thumbnail):
+            self.name = name
+            self.call_label = call_label
+            self.thumbnail = thumbnail
+
+    # Define new skits here. They can be defined in any order.
+    skit_ddcc = Skit("What is DDCC?", "ddcc", "club_date")
+    skit_chaos = Skit("Chaos", "chaos", "club_date")
+    skit_stalker = Skit("Stalker", "stalker", "stalker_date")
+    skit_abridged = Skit("DDLC Abridged", "ddlc_abridged", "residential_day_date")
+    skit_backups = Skit("Good thing she keeps backups", "backups", "club_date")
+    skit_management = Skit("Under New Management", "management", "club_date")
+    skit_stop = Skit("STOP", "stop", "club_date")
+
+    # Add skits to the skit selector here. Add them in the order you want them to be presented.
+    skits = [skit_ddcc, skit_chaos, skit_stalker, skit_abridged, skit_backups, skit_management, skit_stop]
