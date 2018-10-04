@@ -1691,6 +1691,9 @@ default sayori_confess = True
 # We read Natsuki's confession poem in chapter 23.
 default natsuki_23 = None
 
+# Ceane's Skit Array Thing That Makes our lives easier (TM)
+# as long as we don't typo the skit names
+
 init python:
     class Skit:
         def __init__(self, name, call_label, thumbnail):
@@ -1704,7 +1707,7 @@ init python:
     skit_stalker = Skit("Stalker", "stalker", "stalker_date")
     skit_abridged = Skit("DDLC Abridged", "ddlc_abridged", "residential_day_date")
     skit_backups = Skit("Good thing she keeps backups", "backups", "club_date")
-    skit_management = Skit("Under New Management", "management", "club_date")
+    skit_management = Skit("Under New Management", "under_new_management", "club_date")
     skit_stop = Skit("STOP", "stop", "club_date")
     skit_monikas_surprise = Skit("Monika's Surprise", "monikas_surprise", "monika_room_date")
 
