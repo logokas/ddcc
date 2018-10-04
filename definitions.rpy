@@ -147,6 +147,7 @@ image corridor_date = im.FactorScale("bg/corridor.png", 0.15, 0.15)
 image club_date = im.FactorScale("bg/club.png", 0.15, 0.15)
 image residential_day_date = im.FactorScale("bg/residential.png", 0.15, 0.15)
 image stalker_date = im.FactorScale("bg/stalker.png", 0.15, 0.15)
+image monika_room_date = im.FactorScale("cg/monika/monika_bg_glitch.png", 0.15, 0.15)
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
@@ -1705,6 +1706,7 @@ init python:
     skit_backups = Skit("Good thing she keeps backups", "backups", "club_date")
     skit_management = Skit("Under New Management", "management", "club_date")
     skit_stop = Skit("STOP", "stop", "club_date")
+    skit_monikas_surprise = Skit("Monika's Surprise", "monikas_surprise", "monika_room_date")
 
     # Add skits to the skit selector here. Add them in the order you want them to be presented.
-    skits = [skit_ddcc, skit_chaos, skit_stalker, skit_abridged, skit_backups, skit_management, skit_stop]
+    skits = [skit_ddcc, skit_chaos, skit_stalker, skit_abridged, skit_backups, skit_management, skit_stop, skit_monikas_surprise]
