@@ -1710,6 +1710,7 @@ init python:
     skit_management = Skit("Under New Management", "under_new_management", "club_date")
     skit_stop = Skit("STOP", "stop", "club_date")
     skit_monikas_surprise = Skit("Monika's Surprise", "monikas_surprise", "monika_room_date")
+    skit_external_monologue = Skit("External Monologue", "external_monologue", "club_date")
 
     # Add skits to the skit selector here. Add them in the order you want them to be presented.
-    skits = [skit_ddcc, skit_chaos, skit_stalker, skit_abridged, skit_backups, skit_management, skit_stop, skit_monikas_surprise]
+    skits = [skit_ddcc, skit_chaos, skit_stalker, skit_abridged, skit_backups, skit_management, skit_stop, skit_monikas_surprise, skit_external_monologue]
