@@ -12,6 +12,7 @@ label monikas_surprise:
     $ m_name = "Monika"
     $ s_name = "Sayori"
 
+    scene black
     show mask_2
     show monika_room
     play music m1
