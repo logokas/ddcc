@@ -1,7 +1,7 @@
 # "Monika's Surprise" by Tormuse
 # All extra art created by LunaticRabbit
 
-label monikas_surprise:
+label monikas_surprise(preserve_transition=True):
     image monika smug = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_smug.png")
     image monika smug2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_smug2.png")
     image monika mischief = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_mischief.png")
@@ -149,5 +149,9 @@ label monikas_surprise:
     hide screen tear
     hide sayori
     scene black
-#    pause 1
+    #Disable the transition's glitch intro because we just had one here.
+    if preserve_transition == False:
+        $ transition_glitch_intro = False
+    window hide
+    $ pause(1.5)
     return

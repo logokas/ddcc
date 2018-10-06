@@ -1,8 +1,9 @@
 ##"Chaos" by Logokas
-label chaos:
+label chaos(preserve_transition=True):
 
     scene bg club_day
-    #with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t5
 
     show sayori 1d zorder 2 at i33
@@ -56,4 +57,7 @@ label chaos:
     window hide(None)
     scene black
     pause 3
+    # Remove the glitch intro of the transition as it's a black screen, so you wouldn't be able to see it anyway.
+    if preserve_transition == False:
+        $ transition_glitch_intro = False
     return

@@ -1,10 +1,11 @@
 ## "DDLC Abridged" - By Chronos#1609
 
-label ddlc_abridged:
+label ddlc_abridged(preserve_transition=True):
     
     stop music fadeout 2.0
     scene bg residential_day
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t2
     
     mc "I'm both bored and boring."

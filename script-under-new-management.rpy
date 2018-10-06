@@ -1,9 +1,10 @@
 ##"Under New Management" by Chronos#1609
-label under_new_management:
+label under_new_management(preserve_transition=True):
     
     scene bg club_day
     show sayori 1b at t11
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t5
     
     
