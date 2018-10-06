@@ -4,20 +4,22 @@
 label start:
     stop music fadeout 1.5
     call ddcc from _call_ddcc
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition
     call chaos from _call_chaos
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition1
     call stalker from _call_stalker
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition2
     call ddlc_abridged from _call_abridged
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition3
     call backups from _call_backups
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition4
     call under_new_management from _call_management
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition5
     call stop from _call_stop
-    #TODO: Call scene transition
+    call skit_transition from _call_skit_transition6
     call monikas_surprise from _call_monikas_surprise
+    call skit_transition from _call_skit_transition7
+    #call credits from _call_credits
     return
 
 screen scenechoice1:

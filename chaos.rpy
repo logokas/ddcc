@@ -2,7 +2,7 @@
 label chaos:
 
     scene bg club_day
-    with dissolve_scene_full
+    #with dissolve_scene_full
     play music t5
 
     show sayori 1d zorder 2 at i33
