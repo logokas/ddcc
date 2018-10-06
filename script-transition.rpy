@@ -9,6 +9,10 @@ define audio.transition1 = "mod_assets/transition1.wav"
 image bg transition_image = "mod_assets/shared_assets/transition_image.png"
 
 # Transition Code
+# NOTE: For this transition to work properly both in and out, all played skits
+# must not use any transitions, and avoid using the screen tear type of
+# effects to avoid anything doubling up and awkward fades.
+
 label skit_transition:
 
     # We insert a screen tear first to ease in
