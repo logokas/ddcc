@@ -1,8 +1,9 @@
 ## The Explanation
-label ddcc:
+label ddcc(preserve_transition=True):
 
     scene bg club_day
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t5b
     
     show mc 1 zorder 2 at r11

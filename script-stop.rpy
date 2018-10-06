@@ -5,11 +5,12 @@
 ##If that's done, then the extra images made of her could probably be removed, excluding the "closed eyes angry" one.
 ##Also of note: credit both Yagamirai and LunaticRabbit for the sprite assets Monika uses.
 
-label stop:
+label stop(preserve_transition=True):
     
     scene bg club_day
     show monika 1c at t11
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t6
     
     mc "So...what's it like trying to run a literature club?  Are there any challenges that are specific to it?"
@@ -184,5 +185,8 @@ label stop:
     play sound "sfx/crack.ogg"
     pause 3.0
 
+    # Remove the glitch intro of the transition as it's a black screen, so you wouldn't be able to see it anyway.
+    if preserve_transition == False:
+        $ transition_glitch_intro = False
     
     return

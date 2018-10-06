@@ -1,11 +1,12 @@
 ### "Good thing she keeps backups" - By Chronos#1609
 
 
-label backups:
+label backups(preserve_transition=True):
     
     scene bg club_day
     show monika 2i at f21
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t6
     
     m "...So...would that...be where...?"

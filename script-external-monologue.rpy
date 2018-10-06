@@ -1,9 +1,11 @@
-label external_monologue:
+#"External Monologue" by Tormuse
+label external_monologue(preserve_transition=True):
     $ y_name = "Girl 1"
     $ n_name = "Girl 2"
     $ m_name = "Girl 3"
     scene bg club_day
-    with wipeleft
+    if preserve_transition == True:
+        with wipeleft
     play music t3
     show sayori 4x at l21
     s "Everyone! The new member is here~!"

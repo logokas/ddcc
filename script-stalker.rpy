@@ -1,12 +1,13 @@
 
 
-label stalker:
+label stalker(preserve_transition=True):
     stop music fadeout 2.0
 
     #Thanks for guiding me so far with the programming Karl... it's # to re-write, huh?
     $ persistent.playthrough = 0
     scene bg stalker_bg
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
 
     #'Hold on, let me just put this in.'
     if player == m_name:

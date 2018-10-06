@@ -7,6 +7,7 @@
 # Defining the Transition assets
 define audio.transition1 = "mod_assets/transition1.wav"
 image bg transition_image = "mod_assets/shared_assets/transition_image.png"
+define transition_glitch_intro = True
 
 # Transition Code
 # NOTE: For this transition to work properly both in and out, all played skits
@@ -17,11 +18,12 @@ label skit_transition:
 
     # We insert a screen tear first to ease in
     window hide
-    show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.3)
-    stop sound
-    hide screen tear
+    if transition_glitch_intro == True:
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.3)
+        stop sound
+        hide screen tear
     $ quick_menu = False
     stop music
     show bg transition_image zorder 4
@@ -32,6 +34,7 @@ label skit_transition:
     $ y_name = "Yuri"
     $ n_name = "Natsuki"
     $ m_name = "Monika"
+    $ transition_glitch_intro = True
     
     # Finally a screen tear to ease out
     $ pause (3)

@@ -5,21 +5,22 @@ label start:
     stop music fadeout 1.5
     call ddcc from _call_ddcc
     call skit_transition from _call_skit_transition
-    call chaos from _call_chaos
+    call chaos(False) from _call_chaos
     call skit_transition from _call_skit_transition1
-    call stalker from _call_stalker
+    call stalker(False) from _call_stalker
     call skit_transition from _call_skit_transition2
-    call ddlc_abridged from _call_abridged
+    call ddlc_abridged(False) from _call_abridged
     call skit_transition from _call_skit_transition3
-    call backups from _call_backups
+    call backups(False) from _call_backups
     call skit_transition from _call_skit_transition4
-    call under_new_management from _call_management
+    call under_new_management(False) from _call_management
     call skit_transition from _call_skit_transition5
-    call stop from _call_stop
+    call stop(False) from _call_stop
     call skit_transition from _call_skit_transition6
-    call monikas_surprise from _call_monikas_surprise
+    call monikas_surprise(False) from _call_monikas_surprise
     call skit_transition from _call_skit_transition7
-    call external_monologue from _call_external_monologue
+    call external_monologue(False) from _call_external_monologue
+    call skit_transition from _call_skit_transition8
     #TODO: call credits from _call_credits
     return
 
