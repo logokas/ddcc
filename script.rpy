@@ -19,7 +19,8 @@ label start:
     call skit_transition from _call_skit_transition6
     call monikas_surprise from _call_monikas_surprise
     call skit_transition from _call_skit_transition7
-    #call credits from _call_credits
+    call external_monologue from _call_external_monologue
+    #TODO: call credits from _call_credits
     return
 
 screen scenechoice1:
@@ -43,8 +44,8 @@ screen scenechoice2:
    text skits[6].name xcenter .42 ycenter .317 style "monika_text"
    imagebutton idle skits[7].thumbnail action [SetVariable('jumpLabel',skits[7].call_label), Jump(label="cleanJump")] xcenter .6 ycenter .217 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text skits[7].name xcenter .6 ycenter .317 style "monika_text"
-   imagebutton idle "class_date" xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-   text "2-A Classroom" xcenter .42 ycenter .571 style "monika_text"
+   imagebutton idle skits[8].thumbnail action [SetVariable('jumpLabel',skits[8].call_label), Jump(label="cleanJump")] xcenter .42 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+   text skits[8].name xcenter .42 ycenter .571 style "monika_text"
    imagebutton idle "class_date" xcenter .6 ycenter .471 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
    text "2-B Classroom" xcenter .6 ycenter .571 style "monika_text"
    imagebutton idle "class_date" xcenter .42 ycenter .726 hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
