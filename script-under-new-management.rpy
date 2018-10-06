@@ -23,7 +23,7 @@ label under_new_management:
     n 5q "Not like that {i}fucking bitch{/i} who used to run this place..."
     show natsuki 5s at t31
     show yuri 2r at f33
-    y "I'm inclined to agree...she was about as pleasant as Gonorrhea, minus the implied enjoyment that happens before meeting them."
+    y "I'm inclined to agree...she was about as pleasant as Gonorrhea, minus the implied enjoyment that happens beforehand."
     show yuri 2g at t33
     mc "Wow...you guys must {i}really{/i} have hated her..."
     show sayori 4j at f32
