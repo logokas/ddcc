@@ -46,7 +46,7 @@ label external_monologue(preserve_transition=True):
     show monika 2m zorder 2 at t42
     show yuri 4e zorder 2 at f44
     y "Oh...  oh my..."
-    show yuri 4e zorder 2 at f44
+    show yuri 4e zorder 2 at t44
     show sayori 1l at f41
     s "Aww, [player], you're gonna make me blush."
     show sayori 1y at t41
@@ -148,11 +148,11 @@ label external_monologue(preserve_transition=True):
     show yuri 2h at f33
     y "I would have to agree that this train of dialogue has gotten somewhat inappropriate."
     show yuri 2g at t33
-    "Yuri would be fun to get close to as well.  You know what they say about the quiet ones.  I bet she's wild in bed."
-    show yuri 3p at f33
+    "Yuri would be fun to get close to as well.  You know what they say about the quiet ones.  I bet she's wild in bed..."
+    show yuri 3p at hf33
     y "W-W-WHAT?"
     show yuri 3p at t33
-    "I'd motorboat those tits any day."
+    "And I love the way she jiggles when she's flustered."
     show yuri 4d at f33
     y "Oh...  oh, this is so embarrassing!"
     show yuri 4c at t33
