@@ -1,0 +1,39 @@
+DDCC Skit Submission Guidelines
+
+    This document is to explain the ruleset that all submissions must follow in order to be added and incorporated into the final version of the DDCC compilation mod.
+    
+    1. Submission Basics & Critera
+    
+        All submissions must follow the following base features:
+        
+        -Be around 5-60 seconds long, at average reading speed. ( Exceptions to this rule are possible, on a case-by-case basis. )
+        -Contain a humorous and/or entertaining premise.
+        -Must not contain any content beyond PG13. Crass language should be kept to a minimum. ( Exceptions to this rule are possible, on a case-by-case basis. )
+        
+        The Criteria of these submissions that the DDCC Project is looking for are:
+        -Entertaining, self contained pieces of DDLC related content, including but not limited to - Parodies, Self-aware situations, 4th-wall breaks, alternate scenarios.
+        -Technical submissions that could teach new things to anyone who looks at the code to learn from it. Well commented code for advanced and/or special tricks are appreciated.
+        
+    2. Submission Technicals
+    
+        All submissions must follow the following technical guidelines:
+        
+        -Your entry should be named 'script-XYZ.rpy'.
+        -Your script may contain custom definitions. For large amounts, it is recommended that they are separated and submitted as 'definitions-XYZ.rpy'
+        -Your entry may include custom assets. These assets must be submitted as a folder in mod_assets, and named XYZ.
+        -Assets should be named by the following set of defined rules:
+            -Sounds: XYZ_sfx00.wav
+            -Music: XYZ_bgm00.ogg
+            -Voices: XYZ_!00.wav
+            -Backgrounds: XYZ_bg00.png
+            -Sprites: XYZ_!_spritename.png
+        LEGEND: XYZ - short name unique to your entry | ! - relevant character ( s, m, y, n, mc, or other ) | 00 - numeric value, starting from 01 | spritename - freeform label
+        
+        If you are submitting multiple entries, you may submit all your assets in a single folder, named after yourself. All other naming conventions for files must still apply.
+        
+        Shared Assets, such as a set of Main Character sprites, are available.
+        If there are convenient definitions or custom assets you'd like to add
+        into the project that you feel would help other submissions,
+        you may submit them as shared assets for communal use.
+        Shared Assets do not need to follow the naming conventions outlined above,
+        but must still be submitted in a logical, and functional manner.

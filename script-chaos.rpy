@@ -1,6 +1,6 @@
 # "Chaos" by Logokas
 
-image monika 6 = im.Composite((960, 960), (0, 0), "mod_assets/chaos/super-monika.png")
+image monika 6 = im.Composite((960, 960), (0, 0), "mod_assets/chaos/chaos_m_super-monika.png")
 
 label chaos(preserve_transition=True):
 
