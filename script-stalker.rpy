@@ -39,7 +39,7 @@ label stalker(preserve_transition=True):
     #a little music here~
     y "It's {i}grassier{/i} than they put out in the books."
     y 2ss "I wonder if the landmarks are right..."
-    play sound "utsounds/army1.ogg"
+    play sound "mod_assets/stalker/army1.ogg"
     show yuri 3se
     y "Ooh-!"
     y "..."
@@ -49,12 +49,12 @@ label stalker(preserve_transition=True):
     y "Perhaps enjoy some tea as well."
     y 2sc "Perfect place to read!"
     show yuri 3sp at t43
-    play sound "utsounds/breeki.ogg"
+    play sound "mod_assets/stalker/breeki.ogg"
     y "Eaahh!!"
     y "Bandits!!"
     s "Papali-!"
     s "Papali suka!"
-    play sound "utsounds/shotgun.ogg"
+    play sound "mod_assets/stalker/shotgun.ogg"
     show sayori 6p at h41
     s "Uwaaaa-!!!"
     s "Heeeeeelp mee!!!"
@@ -64,7 +64,7 @@ label stalker(preserve_transition=True):
     show yuri 1so at t11
     y "I should call the army."
     y "They'll be of quaint assistance!"
-    play sound "utsounds/army2.ogg"
+    play sound "mod_assets/stalker/army2.ogg"
     scene bg stalker_bg2
     with dissolve_scene_full
     pause 1.0
@@ -90,7 +90,7 @@ label stalker(preserve_transition=True):
     show monika 1se
     y "I..."
     y "I'm alone..."
-    play sound "utsounds/army3.ogg"
+    play sound "mod_assets/stalker/army3.ogg"
     m 3sk "Perfect!"
     show monika 3sj
     y 2sq "Ahaha..."
@@ -98,7 +98,7 @@ label stalker(preserve_transition=True):
     m 1sa "Say goodbye."
     y 1se "Goodbye?"
     y "But I just got here..."
-    play sound "utsounds/shotgun2.ogg"
+    play sound "mod_assets/stalker/shotgun2.ogg"
     m 1se "I know, Yuri."
     m 1sj "I know..."
     stop music
@@ -108,7 +108,7 @@ label stalker(preserve_transition=True):
     y 3sp "Eahhh!"
     scene black
     hide yuri
-    play sound "utsounds/shotgun.ogg"
+    play sound "mod_assets/stalker/shotgun.ogg"
     y "..."
     y "..."
     y "..."
@@ -135,13 +135,13 @@ label stalker(preserve_transition=True):
     s 2sy "I actually don't have any bullets left."
     y 1sf "Oh?"
     y 1sa "Well what's the worst that can happen?"
-    play sound "utsounds/breeki.ogg"
+    play sound "mod_assets/stalker/breeki.ogg"
     show yuri 2sn
     show sayori 4sn
     n "Anu cheeki breeki iv damke!"
-    scene black
-    stop music
-    hide sayori
-    hide yuri
-    "FIN."
+#    scene black
+#    stop music
+#    hide sayori
+#    hide yuri
+#    "FIN."
     return

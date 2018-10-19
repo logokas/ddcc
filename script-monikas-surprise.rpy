@@ -2,13 +2,13 @@
 # All extra art created by LunaticRabbit
 
 label monikas_surprise(preserve_transition=True):
-    image monika smug = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_smug.png")
-    image monika smug2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_smug2.png")
-    image monika mischief = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_mischief.png")
-    image monika embarrassed = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_embarrassed.png")
-    image monika blush = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_blush.png")
-    image monika blush2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_blush2.png")
-    image monika mad = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise_mad.png")
+    image monika smug = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_smug.png")
+    image monika smug2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_smug2.png")
+    image monika mischief = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_mischief.png")
+    image monika embarrassed = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_embarrassed.png")
+    image monika blush = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_blush.png")
+    image monika blush2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_blush2.png")
+    image monika mad = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_mad.png")
     $ m_name = "Monika"
     $ s_name = "Sayori"
 

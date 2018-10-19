@@ -3,7 +3,7 @@
 # Definitions Compiled by CPG Yuri
 # https://www.deviantart.com/childish-n/art/DDLC-Protagonist-Sprite-Version-2-751332184
 
-#Character Definition
+#Character Definitions
 define imc = Character('MC', image='mc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 image mc 1 = im.Composite((960, 960), (0, 0), "mod_assets/shared_assets/mc/1l.png", (0, 0), "mod_assets/shared_assets/mc/1r.png", (0, 0), "mod_assets/shared_assets/mc/a.png")
@@ -161,16 +161,16 @@ image mc 5error = im.Composite((960, 960), (0, 0), "mod_assets/shared_assets/mc/
 image mc 5error1 = im.Composite((960, 960), (0, 0), "mod_assets/shared_assets/mc/3.png", (0, 0), "mod_assets/shared_assets/mc/error1.png")
 image mc 5shock = im.Composite((960, 960), (0, 0), "mod_assets/shared_assets/mc/3.png", (0, 0), "mod_assets/shared_assets/mc/shock.png")
 
-image mc_glitch: #MC GLITCH SPRITE
-    choice:
-        "mod_assets/shared_assets/mc/old/1.png"
-    choice:
-        "mod_assets/shared_assets/mc/old/2.png"
-    choice:
-        "mod_assets/shared_assets/mc/old/3.png"
-    choice:
-        "mod_assets/shared_assets/mc/old/4.png"
-    choice:
-        "mod_assets/shared_assets/mc/old/5.png"
-    0.15
-    repeat
+#image mc_glitch: #MC GLITCH SPRITE ***UNUSED***
+#    choice:
+#        "mod_assets/shared_assets/mc/old/1.png"
+#    choice:
+#        "mod_assets/shared_assets/mc/old/2.png"
+#    choice:
+#        "mod_assets/shared_assets/mc/old/3.png"
+#    choice:
+#        "mod_assets/shared_assets/mc/old/4.png"
+#    choice:
+#        "mod_assets/shared_assets/mc/old/5.png"
+#    0.15
+#    repeat
