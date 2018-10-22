@@ -16,13 +16,13 @@ label swoosh:
         import random
         swoosh_x = random.randint(0,3)
     if swoosh_x == 0:
-        play sound "mod_assets/chronos/chronos_sfx01.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_01.ogg"
     if swoosh_x == 1:
-        play sound "mod_assets/chronos/chronos_sfx02.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_02.ogg"
     if swoosh_x == 2:
-        play sound "mod_assets/chronos/chronos_sfx03.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_03.ogg"
     if swoosh_x == 3:
-        play sound "mod_assets/chronos/chronos_sfx04.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_04.ogg"
     
     return
     
