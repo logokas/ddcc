@@ -16,13 +16,13 @@ label swoosh:
         import random
         swoosh_x = random.randint(0,3)
     if swoosh_x == 0:
-        play sound "mod_assets/SFX/swoosh1.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_01.ogg"
     if swoosh_x == 1:
-        play sound "mod_assets/SFX/swoosh2.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_02.ogg"
     if swoosh_x == 2:
-        play sound "mod_assets/SFX/swoosh3.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_03.ogg"
     if swoosh_x == 3:
-        play sound "mod_assets/SFX/swoosh4.ogg"
+        play sound "mod_assets/chronos/chronos_sfx_swoosh_04.ogg"
     
     return
     
@@ -53,34 +53,34 @@ label st_n:
 ## To make sure we don't accidentally step on someone else's tags, these are intentionally kind of long tags, but for your own project you should try and keep them shorter and simpler, so that you can write the tag out quickly.
 ## Personally, I prefer to use /u/AgentGold's posing utility, which completely bypasses this entire step of having to write definitions out yourself, and allows MUCH MUCH MORE flexibility with the poses you can make for the characters.
 ## But - worry about that once you're a bit more comfortable with this in general.
-image monika 1chr_ce = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_closed_eyes_annoyed_head.png")
-image monika 1chr_oecm = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_closed_mouth_head.png")
-image monika 1chr_oeom = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_yelling_head.png")
+image monika 1chr_ce = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_closed_eyes_annoyed_head.png")
+image monika 1chr_oecm = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_closed_mouth_head.png")
+image monika 1chr_oeom = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_yelling_head.png")
 
-image monika 2chr_ce = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_closed_eyes_annoyed_head.png")
-image monika 2chr_oecm = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_closed_mouth_head.png")
-image monika 2chr_oeom = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_yelling_head.png")
+image monika 2chr_ce = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_closed_eyes_annoyed_head.png")
+image monika 2chr_oecm = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_closed_mouth_head.png")
+image monika 2chr_oeom = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_yelling_head.png")
 
-image monika 3chr_ce = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_closed_eyes_annoyed_head.png")
-image monika 3chr_oecm = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_closed_mouth_head.png")
-image monika 3chr_oeom = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_yelling_head.png")
+image monika 3chr_ce = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_closed_eyes_annoyed_head.png")
+image monika 3chr_oecm = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_closed_mouth_head.png")
+image monika 3chr_oeom = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_yelling_head.png")
 
-image monika 4chr_ce = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_closed_eyes_annoyed_head.png")
-image monika 4chr_oecm = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_closed_mouth_head.png")
-image monika 4chr_oeom = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/special/m_open_eyes_annoyed_yelling_head.png")
+image monika 4chr_ce = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_closed_eyes_annoyed_head.png")
+image monika 4chr_oecm = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_closed_mouth_head.png")
+image monika 4chr_oeom = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/chronos/chronos_m_open_eyes_annoyed_yelling_head.png")
     
     
     
 ## Sayori's glitch sprite definition:
 ## So this one will automatically cycle through all 4 of the below images, paused between each for the duration listed below each image, before returning to the top again.
 image sayori glitch_chronos_skit:
-    "mod_assets/Special/Sayori_glitch_u223112_d.png"
+    "mod_assets/chronos/chronos_s_glitch_u223112_d.png"
     pause 0.125
-    "mod_assets/Special/Sayori_glitch_u223112_l.png"
+    "mod_assets/chronos/chronos_s_glitch_u223112_l.png"
     pause 0.125
-    "mod_assets/Special/Sayori_glitch_u223112_u.png"
+    "mod_assets/chronos/chronos_s_glitch_u223112_u.png"
     pause 0.125
-    "mod_assets/Special/Sayori_glitch_u223112_r.png"
+    "mod_assets/chronos/chronos_s_glitch_u223112_r.png"
     pause 0.375
     repeat
     
@@ -89,31 +89,31 @@ image sayori glitch_chronos_skit:
 ## Again, this is intended to be a learning exercise first and foremost for how to use the base game's systems - for that reason, I've intentionally not done what I would prefer to do, which is just use /u/AgentGold's posing tool; my own mod utilizes it exclusively.
 ## Special react image for Natsuki:
 image natsuki react_chronos_skit:
-    "mod_assets/Special/Natsuki_react_1.png"
+    "mod_assets/chronos/chronos_n_react_1.png"
     
     
     
 ## Special "Point" image for Natsuki:
 image natsuki point_1_chronos_skit:
-    "mod_assets/Special/Natsuki_point_1.png"
+    "mod_assets/chronos/chronos_n_point_1.png"
     
     
     
 ## Special "Pissed off" Sayori:
 image sayori pissed_chronos_skit:
-    "mod_assets/Special/Sayori_pissed.png"
+    "mod_assets/chronos/chronos_s_pissed.png"
     
     
     
 ## Special "Aroused" Sayori:
 image sayori aroused_1_chronos_skit:
-    "mod_assets/Special/Sayori_aroused_1.png"
+    "mod_assets/chronos/chronos_s_aroused_1.png"
     
     
     
 ## Second "aroused" Sayori:
 image sayori aroused_2_chronos_skit:
-    "mod_assets/Special/Sayori_aroused_2.png"
+    "mod_assets/chronos/chronos_s_aroused_2.png"
     
     
     
@@ -140,29 +140,29 @@ image y_kill_chronos_skit = ConditionSwitch(
     
 ## Yuri self-stabbing definitions.  There's a lot, so here's a block of them.
 image yuri chr_01:
-    "mod_assets/Special/Yuri_stab_embarrassed_open_mouth.png"
+    "mod_assets/chronos/chronos_y_stab_embarrassed_open_mouth.png"
 image yuri chr_02:
-    "mod_assets/Special/Yuri_stab_embarrassed_closed_mouth.png"
+    "mod_assets/chronos/chronos_y_stab_embarrassed_closed_mouth.png"
 image yuri chr_03:
-    "mod_assets/Special/Yuri_stab_admitting.png"
+    "mod_assets/chronos/chronos_y_stab_admitting.png"
 image yuri chr_04:
-    "mod_assets/Special/Yuri_stab_train_open_mouth.png"
+    "mod_assets/chronos/chronos_y_stab_train_open_mouth.png"
 image yuri chr_05:
-    "mod_assets/Special/Yuri_stab_train_closed_mouth.png"
+    "mod_assets/chronos/chronos_y_stab_train_closed_mouth.png"
 image yuri chr_06:
-    "mod_assets/Special/Yuri_stab_flustered_response.png"
+    "mod_assets/chronos/chronos_y_stab_flustered_response.png"
 image yuri chr_07:
-    "mod_assets/Special/Yuri_stab_flustered_open_mouth.png"
+    "mod_assets/chronos/chronos_y_stab_flustered_open_mouth.png"
 image yuri chr_08:
-    "mod_assets/Special/Yuri_stab_peeved_1.png"
+    "mod_assets/chronos/chronos_y_stab_peeved_1.png"
 image yuri chr_09:
-    "mod_assets/Special/Yuri_stab_peeved_2.png"
+    "mod_assets/chronos/chronos_y_stab_peeved_2.png"
 image yuri chr_10:
-    "mod_assets/Special/Yuri_stab_peeved_3.png"
+    "mod_assets/chronos/chronos_y_stab_peeved_3.png"
 image yuri chr_11:
-    "mod_assets/Special/Yuri_stab_peeved_4.png"
+    "mod_assets/chronos/chronos_y_stab_peeved_4.png"
 image yuri chr_12:
-    "mod_assets/Special/Yuri_stab_peeved_5.png"
+    "mod_assets/chronos/chronos_y_stab_peeved_5.png"
     
     
     

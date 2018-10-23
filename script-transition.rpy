@@ -5,8 +5,8 @@
 # leftovers are not carried over from one skit to the next.
 
 # Defining the Transition assets
-define audio.transition1 = "mod_assets/transition1.wav"
-image bg transition_image = "mod_assets/shared_assets/transition_image.png"
+define audio.transition1 = "mod_assets/shared_assets/transition1.wav"
+image bg transition_image = "mod_assets/shared_assets/transition_default.png"
 define transition_glitch_intro = True
 
 # Transition Code
