@@ -10,6 +10,7 @@
 ## I've made these utilities just to make my life as a scripter a bit easier - I put a weird/long bit of code or function behind a label, and then anytime I want I just call that much shorter label to make it quicker on my end.  Boom, easy way to increase your productivity as a scripter.
 
 ## First one's to call that "swoosh" SFX used for when the characters fly onscreen.
+## "Swoosh" SFX pulled from this file here: https://freesound.org/people/speedygonzo/sounds/257656/
 ## To do this, we'll use a little bit of python to basically call a random variable, and make it one of 4 variables randomly - that way, each of the 4 variants on the swoosh SFX has an equal chance of randomly being played whenever it's called.
 label swoosh:
     python:
@@ -48,6 +49,18 @@ label st_n:
 ##############################################################
 ## Definitions:
 ## Special definitions for Monika being annoyed.
+## These definitions require the following credits:
+##
+## Mouth by @yagamirai10#7046
+## Used in:
+## chronos_m_closed_eyes_annoyed_head.png
+## chronos_m_open_eyes_annoyed_yelling_head.png
+##
+## Yandere eyes by LunaticRabbit
+## Used in:
+## chronos_m_open_eyes_annoyed_closed_mouth_head.png
+## chronos_m_open_eyes_annoyed_yelling_head.png
+##
 ## Unlike the other definitions - which are single images - we'll use compositing to make these images, so that the head can basically be thrown into any "regular" tagging pose that would work for her.
 ## To do that, we have to make a version for each variation on tags - 1 through 4 - for each head that can be attached - of which there are three versions.
 ## To make sure we don't accidentally step on someone else's tags, these are intentionally kind of long tags, but for your own project you should try and keep them shorter and simpler, so that you can write the tag out quickly.
@@ -94,6 +107,9 @@ image natsuki react_chronos_skit:
     
     
 ## Special "Point" image for Natsuki:
+## Natsuki "Pointing" edit by /u/AgentGold
+## Used in:
+## chronos_n_point_1.png
 image natsuki point_1_chronos_skit:
     "mod_assets/chronos/chronos_n_point_1.png"
     
