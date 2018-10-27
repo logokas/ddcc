@@ -450,7 +450,7 @@ screen navigation():
                 else:
                     textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
 
-                    textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                    #textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
 
             else:
 
@@ -477,7 +477,7 @@ screen navigation():
             if renpy.variant("pc"):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action Help("README.html")
+                textbutton _("Contribute") action OpenURL("http://reddit.com/r/DDLCMods")
 
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
