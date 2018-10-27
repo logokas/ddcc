@@ -477,7 +477,7 @@ screen navigation():
             if renpy.variant("pc"):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Contribute") action OpenURL("http://reddit.com/r/DDLCMods")
+                textbutton _("Help!") action OpenURL("http://reddit.com/r/DDLCMods")
 
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
