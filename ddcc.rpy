@@ -61,7 +61,7 @@ label ddcc(preserve_transition=True):
     imc 1a "For more information and specifics for how to submit, check r/DDLCMods by clicking the Help button in the main menu."
     
     voice "mod_assets/ddcc/ddcc_mc16.wav"
-    imc 1c "Or, alternatively, if you're exceptionally lazy, click the link {a=http://www.reddit.com/r/DDLCMods}right here{/a}!"
+    imc 1c "Or, alternatively, if you're exceptionally lazy, click the link {a=http://www.reddit.com/r/DDLCMods}RIGHT HERE{/a}!"
     
     voice "mod_assets/ddcc/ddcc_mc17.wav"
     imc 4a "The full mod is planned for release very soon, so get your creativity going!"
@@ -70,7 +70,7 @@ label ddcc(preserve_transition=True):
     #imc "That is all. Happy modding!"
     
     voice "mod_assets/ddcc/ddcc_mc19.wav"
-    imc 3c "To help give you some idea of the sorts of skits we're looking for, please enjoy the following caddlecade of nonsensical examples."
+    imc 3c "To help give you some idea of the sorts of skits we're looking for, please enjoy the following cavalcade of nonsensical examples."
     
     voice "mod_assets/ddcc/ddcc_mc20.wav"
     imc 3w "This way, {i}we don't get flooded with a bunch of questions about what kind of skits we want.{/i}"
