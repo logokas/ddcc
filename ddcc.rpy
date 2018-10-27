@@ -5,7 +5,7 @@ init -200 python:
         "club_date" #Thumbnail
     )
 
-    #skits.append(skit_ddcc) Commented out because we call it manually
+    skits.append(skit_ddcc)
 
 ## The Explanation
 label ddcc(preserve_transition=True):
