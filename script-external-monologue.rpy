@@ -1,4 +1,15 @@
 #"External Monologue" by Tormuse
+
+init -200 python:
+    skit_external_monologue = Skit(
+        "External Monologue", # Title
+        "external_monologue", # Label
+        "club_date" #Thumbnail
+    )
+
+    skits.append(skit_external_monologue)
+
+
 label external_monologue(preserve_transition=True):
     $ y_name = "Girl 1"
     $ n_name = "Girl 2"

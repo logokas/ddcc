@@ -1,3 +1,12 @@
+init -200 python:
+    skit_ddcc = Skit(
+        "What is DDCC?", # Title
+        "ddcc", # Label
+        "club_date" #Thumbnail
+    )
+
+    #skits.append(skit_ddcc) Commented out because we call it manually
+
 ## The Explanation
 label ddcc(preserve_transition=True):
 

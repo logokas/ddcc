@@ -1,4 +1,15 @@
 ##"Under New Management" by Chronos#1609
+
+init -200 python:
+    skit_management = Skit(
+        "Under New Management", # Title
+        "under_new_management", # Label
+        "club_date" #Thumbnail
+    )
+
+    skits.append(skit_management)
+
+
 label under_new_management(preserve_transition=True):
     
     scene bg club_day

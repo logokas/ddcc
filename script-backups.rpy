@@ -1,5 +1,14 @@
 ### "Good thing she keeps backups" - By Chronos#1609
 
+init -200 python:
+    skit_backups = Skit(
+        "Good thing she keeps backups", # Title
+        "backups", # Label
+        "club_date" #Thumbnail
+    )
+
+    skits.append(skit_backups)
+
 
 label backups(preserve_transition=True):
     

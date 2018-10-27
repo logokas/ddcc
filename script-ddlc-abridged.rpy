@@ -1,5 +1,14 @@
 ## "DDLC Abridged" - By Chronos#1609
 
+init -200 python:
+    skit_ddlc_abridged = Skit(
+        "DDLC Abridged", # Title
+        "ddlc_abridged", # Label
+        "residential_day_date" #Thumbnail
+    )
+
+    skits.append(skit_ddlc_abridged)
+
 label ddlc_abridged(preserve_transition=True):
     
     stop music fadeout 2.0
