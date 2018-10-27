@@ -1,5 +1,5 @@
 ## Attribution/Credit for assets used in Chronos' skits:
-## - Alternate Monika expressions provided by LunaticRabbit and Yagamirai.
+## - Alternate Monika expressions provided by LunaticRabbit and Yagamirai10.
 ## - "Swoosh" SFX pulled from this file here: https://freesound.org/people/speedygonzo/sounds/257656/
 ## - "r##" positions originally defined by TsunCrazy
 ## - As well as most custom poses that aren't possible in the regular game's engine being helpfully created with AgentGold's posing tool, even if the actual posing tags were not used.
@@ -51,7 +51,7 @@ label st_n:
 ## Special definitions for Monika being annoyed.
 ## These definitions require the following credits:
 ##
-## Mouth by @yagamirai10#7046
+## Mouth by Yagamirai10
 ## Used in:
 ## chronos_m_closed_eyes_annoyed_head.png
 ## chronos_m_open_eyes_annoyed_yelling_head.png
