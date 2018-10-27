@@ -1,6 +1,6 @@
 DDCC Skit Submission Guidelines
 
-    This document is to explain the ruleset that all submissions must follow in order to be added and incorporated into the final version of the DDCC compilation mod.
+    This document is to explain the ruleset that all scenario submissions must follow in order to be added and incorporated into the final version of the DDCC compilation mod.
     
     1. Submission Basics & Critera
     
@@ -21,6 +21,7 @@ DDCC Skit Submission Guidelines
         -Your entry should be named 'script-XYZ.rpy'.
         -Your script may contain custom definitions. For large amounts, it is recommended that they are separated and submitted as 'definitions-XYZ.rpy'
         -Your entry may include custom assets. These assets must be submitted as a folder in mod_assets, and named XYZ.
+        -Your entry should include a custom thumbnail, to be displayed in the selection screen. It's maximum resolution should be no more than 640x360
         -Assets should be named by the following set of defined rules:
             -Sounds: XYZ_sfx_name.wav
             -Music: XYZ_bgm00.ogg
