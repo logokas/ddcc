@@ -4,9 +4,6 @@
 label start:
     stop music fadeout 1.5
 
-    call ddcc from _call_ddcc
-    call skit_transition from _call_skit_transition
-
     python:
         for script in skits:
             if script.call_label == "ddcc":
