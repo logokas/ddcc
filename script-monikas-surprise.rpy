@@ -1,6 +1,16 @@
 # "Monika's Surprise" by Tormuse
 # All extra art created by LunaticRabbit
 
+init -200 python:
+    skit_monikas_surprise = Skit(
+        "Monika's Surprise", # Title
+        "monikas_surprise", # Label
+        "monika_room_date" #Thumbnail
+    )
+
+    skits.append(skit_monikas_surprise)
+
+
 label monikas_surprise(preserve_transition=True):
     image monika smug = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_m_smug.png")
     image monika smug2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/surprise/surprise_m_smug2.png")

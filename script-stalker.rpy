@@ -1,3 +1,13 @@
+#Stalker by CampinKarl
+
+init -200 python:
+    skit_stalker = Skit(
+        "S.T.A.L.K.E.R.", # Title
+        "stalker", # Label
+        "stalker_date" #Thumbnail
+    )
+
+    skits.append(skit_stalker)
 
 
 label stalker(preserve_transition=True):

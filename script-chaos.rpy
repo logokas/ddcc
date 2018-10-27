@@ -3,6 +3,16 @@
 # Voice of Monika by AngryHedgehog - https://www.youtube.com/channel/UCOd2-46VpUUEOmUOxLJHAuA/featured
 # Voice of Sayori & Natsuki by Yagamirai10
 
+init -200 python:
+    skit_chaos = Skit(
+        "Chaos", # Title
+        "chaos", # Label
+        "club_date" #Thumbnail
+    )
+
+    skits.append(skit_chaos)
+
+
 image monika 6 = im.Composite((960, 960), (0, 0), "mod_assets/chaos/chaos_m_super-monika.png")
 
 label chaos(preserve_transition=True):

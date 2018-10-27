@@ -5,6 +5,16 @@
 ##If that's done, then the extra images made of her could probably be removed, excluding the "closed eyes angry" one.
 ##Also of note: credit both Yagamirai and LunaticRabbit for the sprite assets Monika uses.
 
+init -200 python:
+    skit_stop = Skit(
+        "Stop", # Title
+        "stop", # Label
+        "club_date" #Thumbnail
+    )
+
+    skits.append(skit_stop)
+
+
 label stop(preserve_transition=True):
     
     scene bg club_day
