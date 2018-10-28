@@ -23,7 +23,7 @@ install:
     
     - bash ./ddcc/travis/setup.sh
 
-    - rsync -av --progress ddcc/* game/mod --exclude game --exclude .travis.yml --exclude travis 
+    - cp -vRf ddcc/* mod/game
     
     - bash ddcc/travis/inject_version.sh
     
