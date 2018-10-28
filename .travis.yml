@@ -24,7 +24,7 @@ install:
     - bash ./ddcc/travis/setup.sh
     
     # Remove README.html to prevent errors.
-    - rm -rf ddcc/sample_mod/README.html && cp -vRf ddcc/* mod/game/*
+    - rm -rf ddcc/sample_mod/README.html && cp -vRf ddcc/* mod/game
     
     - bash ddcc/travis/inject_version.sh
     
