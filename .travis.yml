@@ -22,9 +22,8 @@ install:
     # and CD into the renpy
     
     - bash ./ddcc/travis/setup.sh
-    
-    # Remove README.html to prevent errors.
-    - rm -rf ddcc/sample_mod/README.html && cp -vRf ddcc/* mod/game
+
+    - rsync -av --progress ddcc/* game/mod --exclude game --exclude .travis.yml --exclude travis 
     
     - bash ddcc/travis/inject_version.sh
     
