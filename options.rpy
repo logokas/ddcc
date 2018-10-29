@@ -1,174 +1,107 @@
-## This file contains options that can be changed to customize your game.
-##
-## Lines beginning with two '#' marks are comments, and you shouldn't uncomment
-## them. Lines beginning with a single '#' mark are commented-out code, and you
-## may want to uncomment them when appropriate.
 
 
-## Basics ######################################################################
-
-## A human-readable name of the game. This is used to set the default window
-## title, and shows up in the interface and error reports.
-##
-## The _() surrounding the string marks it as eligible for translation.
-
+# human readable name of this game
+# _() marks strings eligable for translation
 define config.name = "Doki Doki Comedy Club!"
 
+# True shows the name on main menu, False hides it
+define gui.show_name = True
 
-## Determines if the title given above is shown on the main menu screen. Set
-## this to False to hide the title.
+# Version of the game
+define config.version = "0.0.2"
 
-define gui.show_name = False
-
-
-## The version of the game.
-
-define config.version = "0.1"
-
-
-## Text that is placed on the game's about screen. To insert a blank line
-## between paragraphs, write \n\n.
-
+# text placed on about screen
 define gui.about = _("")
 
-
-## A short name for the game used for executables and directories in the built
-## distribution. This must be ASCII-only, and must not contain spaces, colons,
-## or semicolons.
-
+# short name used in executables and dirs.
+# ASCII-only, no spaces, no colons, no semis
 define build.name = "Doki Doki Comedy Club"
 define build.directory_name = "DokiDokiComedyClub"
 
-
-## Sounds and music ############################################################
-
-## These three variables control which mixers are shown to the player by
-## default. Setting one of these to False will hide the appropriate mixer.
-
+# Controls which sound / music mixers are available
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
-
-## To allow the user to play a test sound on the sound or voice channel,
-## uncomment a line below and use it to set a sample sound to play.
-
-# define config.sample_sound = "sample-sound.ogg"
-# define config.sample_voice = "sample-voice.ogg"
-
-
-## Uncomment the following line to set an audio file that will be played while
-## the player is at the main menu. This file will continue playing into the
-## game, until it is stopped or another file is played.
-
+# main menu music
 define config.main_menu_music = audio.t1
 
-
-## Transitions #################################################################
-##
-## These variables set transitions that are used when certain events occur. Each
-## variable should be set to a transition, or None to indicate that no
-## transition should be used.
-
-## Entering or exiting the game menu.
-
+# enter / exiting game menu transitions
 define config.enter_transition = Dissolve(.2)
 define config.exit_transition = Dissolve(.2)
 
-
-## A transition that is used after a game has been loaded.
-
+# transition used when the game has been loaded
 define config.after_load_transition = None
 
-
-## Used when entering the main menu after the game has ended.
-
+# transition used when teh game has ended
 define config.end_game_transition = Dissolve(.5)
 
-
-## A variable to set the transition used when the game starts does not exist.
-## Instead, use a with statement after showing the initial scene.
-
-
-## Window management ###########################################################
-##
-## This controls when the dialogue window is displayed. If "show", it is always
-## displayed. If "hide", it is only displayed when dialogue is present. If
-## "auto", the window is hidden before scene statements and shown again once
-## dialogue is displayed.
-##
-## After the game has started, this can be changed with the "window show",
-## "window hide", and "window auto" statements.
-
+# Controls when dialogue window is displayed:
+#   show - always displayed
+#   hide - only displayed if dialogue is present
+#   auto - hidden before scene statements and shown when dialogue is shown
+#
+# this can be changed with "window <type>" statements
 define config.window = "auto"
 
-
-## Transitions used to show and hide the dialogue window
-
+# transitions used to show / hide the dialogue window
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
 
-
-## Preference defaults #########################################################
-
-## Controls the default text speed. The default, 0, is infinite, while any other
-## number is the number of characters per second to type out.
-
+# default text speed
+# 0 is infinite
+# > 0 is number of characters per second
 default preferences.text_cps = 50
 
-
-## The default auto-forward delay. Larger numbers lead to longer waits, with 0
-## to 30 being the valid range.
-
+# default auto-forward delay. 0 - 30.
 default preferences.afm_time = 15
 
+# default volumes
 default preferences.music_volume = 0.75
 default preferences.sfx_volume = 0.75
 
-## Save directory ##############################################################
-##
-## Controls the platform-specific place Ren'Py will place the save files for
-## this game. The save files will be placed in:
-##
-## Windows: %APPDATA\RenPy\<config.save_directory>
-##
-## Macintosh: $HOME/Library/RenPy/<config.save_directory>
-##
-## Linux: $HOME/.renpy/<config.save_directory>
-##
-## Generally the same as your build name
-## Should always be a literal string and not an expression
-
+# persistent data save directory
+# this is different per platform:
+#   Windows: %AAPDATA%\RenPy\
+#   Mac: $HOME/Libary/RenPy/
+#   Linux: $HOME/.renpy/
+#
+# must be a literal string
 define config.save_directory = "DokiDokiComedyClub"
 
-
-## Icon
-## ########################################################################'
-
-## The icon displayed on the taskbar or dock.
-
+# icon displayed on taskbar / dock
 define config.window_icon = "gui/window_icon.png"
 
-## Custom configs ##############################################################
-
+# True means we allow skipping, False means not
 define config.allow_skipping = False
+
+# True means we can autosave, false means not
 define config.has_autosave = False
+
+# True means autosave when we quit, False means not
 define config.autosave_on_quit = False
+
+# Number of autosave slots to use
 define config.autosave_slots = 0
+
+# layers that screens / images / anything can be displayed on. Best not to
+# mess with this
 define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ]
+
+# Other things to not mess with
 define config.image_cache_size = 64
 define config.predict_statements = 50
 define config.rollback_enabled = config.developer
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
-#define config.gl_resize = False
+
 
 init python:
     if len(renpy.loadsave.location.locations) > 1: del(renpy.loadsave.location.locations[1])
     renpy.game.preferences.pad_enabled = False
     def replace_text(s):
-        s = s.replace('--', u'\u2014') # em dash
-        s = s.replace(' - ', u'\u2014') # em dash
+        s = s.replace('--', u'\u2014') 
+        s = s.replace(' - ', u'\u2014') 
         return s
     config.replace_text = replace_text
 
@@ -183,61 +116,36 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-    #config.adjust_view_size = force_integer_multiplier
 
-## Build configuration #########################################################
-##
-## This section controls how Ren'Py turns your project into distribution files.
-## These settings create a set of files suitable for distributing as a mod.
+
+# BUILD CONFIG
 
 init python:
 
-    ## By default, renpy looks for archive files in the game and common directories
-    ## Mac needs to check in the install directory instead.
-    #if renpy.mac:
+    # the following functions take file pattersn:
+    # file patterns are case-insensitive and matched against the path relative to the 
+    # base directory, with and without a leading /. If multiple patterns match
+    # the first is used.
+    #
+    # / is directory separator
+    # * matches all characters, exxcept directory separator
+    # ** matches all characters, including directory separator
+    #
+    # EXAMPLES
+    # *.txt - - matches txt files in base directory
+    # game/**.ogg - mathces ogg files in game directory or subdirs of game
+    # **.psd - matches psd files anywhere in project
+    #
+    # Classify files as None to exclusde them from the built distributions
+    #
 
-
-
-    ## The following functions take file patterns. File patterns are case-
-    ## insensitive, and matched against the path relative to the base directory,
-    ## with and without a leading /. If multiple patterns match, the first is
-    ## used.
-    ##
-    ## In a pattern:
-    ##
-    ## / is the directory separator.
-    ##
-    ## * matches all characters, except the directory separator.
-    ##
-    ## ** matches all characters, including the directory separator.
-    ##
-    ## For example, "*.txt" matches txt files in the base directory,
-    ## "game/**.ogg" matches ogg files in the game directory or any of its
-    ## subdirectories, and "**.psd" matches psd files anywhere in the project.
-
-    ## Classify files as None to exclude them from the built distributions.
-
-    ## This is the archive of data for your mod
-    #build.archive(build.name, "all")
-
-
-    ## These files get put into your data file
-    #build.classify("game/mod_assets/**",build.name)
-    #build.classify("game/**.rpy",build.name) #Optional line to include plaintext scripts
-    #build.classify("game/**.rpyc",build.name) #Serialized scripts must be included
-    #build.classify("README.html",build.name) #Included help file for mod installation
-
-    ##Optionally include a zip file with all source code
-    #build.classify('**.rpy','source')
-    #build.package(build.directory_name + "source",'zip','source',description='Source Code Archive')
-
+    # packaged ZIP for distibution
     #build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
     build.archive("DDCC", "all") #Put everything labeled "DDCC" into an archive called DDCC
     build.classify("game/mod_assets/**","DDCC") #Everything in the mod_assets folder
     build.classify("game/**.rpyc","DDCC") #All the .rpyc files in /game
     build.classify("game/**.txt","DDCC") #All the .txt files in game
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
-
 
     build.classify('**~', None)
     build.classify('**.bak', None)
@@ -262,17 +170,3 @@ init python:
     build.documentation('*.md')
 
     build.include_old_themes = False
-
-
-
-## A Google Play license key is required to download expansion files and perform
-## in-app purchases. It can be found on the "Services & APIs" page of the Google
-## Play developer console.
-
-# define build.google_play_key = "..."
-
-
-## The username and project name associated with an itch.io project, separated
-## by a slash.
-
-# define build.itch_project = "..."

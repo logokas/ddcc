@@ -336,7 +336,7 @@ screen rigged_choice(items):
     vbox:
         for i in items:
             textbutton i.caption action i.action
-    
+
     timer 1.0/30.0 repeat True action Function(RigMouse)
 
 
@@ -483,7 +483,6 @@ screen navigation():
                 textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
             timer 1.75 action Start("autoload_yurikill")
-
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -1588,4 +1587,3 @@ style notify_frame:
 
 style notify_text:
     size gui.notify_text_size
-
