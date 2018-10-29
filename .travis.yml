@@ -52,7 +52,7 @@ deploy:
     # Head to Settings > Environment variables and set this.
     secure: $GITHUB_API_KEY
   file_glob: true
-  file: "*-dists/*.zip"
+  file: "*-dists/DokiDokiComedyClubMod.zip"
   skip_cleanup: true
   on:
     tags: true # your mods only builds and uploads releases on a GitHub Git tag so make sure you tag and release accordingly!
