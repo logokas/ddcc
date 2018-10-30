@@ -1,20 +1,20 @@
-screen main_menu():
+screen main_menu() tag menu:
 
-    # This ensures that any other menu screen is replaced.
-    tag menu
+
+
 
     style_prefix "main_menu"
-    
+
     add "menu_bg"
     add "menu_art_y"
     add "menu_art_n"
-    frame:
-        pass
+    frame
 
-## The use statement includes another screen inside this one. The actual
-## contents of the main menu are in the navigation screen.
+
+
+
     use navigation
-    
+
     add "menu_particles"
     add "menu_particles"
     add "menu_particles"
@@ -67,3 +67,4 @@ style main_menu_text:
 
 style main_menu_title:
     size gui.title_text_size
+# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

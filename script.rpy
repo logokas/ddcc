@@ -1,6 +1,4 @@
-# This is used for top-level game strucutre.
-# Should not include any actual events or scripting; only logic and calling other labels.
-
+# Entry point
 label start:
     stop music fadeout 1.5
 
