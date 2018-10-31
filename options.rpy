@@ -2,21 +2,20 @@
 
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Doki Doki Comedy Club!"
+define config.name = "Doki Doki Comedy Club"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = True
 
 # Version of the game
-define config.version = "0.0.2"
+define config.version = "0.0.3"
 
 # text placed on about screen
 define gui.about = _("")
 
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
-define build.name = "Doki Doki Comedy Club"
-define build.directory_name = "DokiDokiComedyClub"
+define build.name = "DokiDokiComedyClub"
 
 # Controls which sound / music mixers are available
 define config.has_sound = True
@@ -140,13 +139,17 @@ init python:
     #
 
     # packaged ZIP for distibution
-    #build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
-    build.archive("DDCC", "all") #Put everything labeled "DDCC" into an archive called DDCC
-    build.classify("game/mod_assets/**","DDCC") #Everything in the mod_assets folder
-    build.classify("game/**.rpyc","DDCC") #All the .rpyc files in /game
-    build.classify("game/**.txt","DDCC") #All the .txt files in game
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
+    # archives to create
+    build.archive("DDCC",build.name)
+
+    # folder / files to put in archives
+    build.classify("game/mod_assets/**","DDCC")
+    build.classify('game/**.rpyc',"DDCC")
+    build.classify("game/**.txt","DDCC") #All the .txt files in game
+
+    # stuff to ignore
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
@@ -162,9 +165,7 @@ init python:
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa',None)
 
-    ## Files matching documentation patterns are duplicated in a mac app build,
-    ## so they appear in both the app and the zip file.
-
+    # mark as documentation
     build.documentation('*.html')
     build.documentation('*.txt')
     build.documentation('*.md')
