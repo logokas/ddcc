@@ -139,18 +139,19 @@ init python:
     #
 
     # packaged ZIP for distibution
-    build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
+    build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
     # archives to create
-    build.archive("scripts",build.name)
-    build.archive("mod_assets",build.name)
-    build.archive("submods",build.name)
+    build.archive("DDCC",build.name)
+    #build.archive("mod_assets",build.name)
+    #build.archive("submods",build.name)
 
     # folder / files to put in archives
-    build.classify("game/mod_assets/**","mod_assets")
-    build.classify("game/submods/**","submods")
-    build.classify('game/**.rpyc',"scripts")
-    build.classify('game/advanced_scripts/**',"scripts")
+    build.classify("game/mod_assets/**","DDCC")
+    #build.classify("game/submods/**","submods")
+    build.classify('game/**.rpyc',"DDCC")
+    build.classify("game/**.txt","DDCC") #All the .txt files in game
+    #build.classify('game/advanced_scripts/**',"scripts")
     build.classify('game/original_story_scripts/**',"scripts")
 
     # stuff to ignore
@@ -170,9 +171,11 @@ init python:
     build.classify('**.rpa',None)
 
     # stuff not in archive
-    build.classify('README.html',build.name)
+    #build.classify('README.html',build.name)
 
     # mark as documentation
-    build.documentation('README.html')
+    build.documentation('*.html')
+    build.documentation('*.txt')
+    build.documentation('*.md')
 
     build.include_old_themes = False
