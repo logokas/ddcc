@@ -141,10 +141,10 @@ init python:
 
     # packaged ZIP for distibution
     #build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
-    build.archive("DDCC", "all") #Put everything labeled "DDCC" into an archive called DDCC
-    build.classify("game/mod_assets/**","DDCC") #Everything in the mod_assets folder
-    build.classify("game/**.rpyc","DDCC") #All the .rpyc files in /game
-    build.classify("game/**.txt","DDCC") #All the .txt files in game
+    #build.archive("DDCC", "all") #Put everything labeled "DDCC" into an archive called DDCC
+    build.classify("game/mod_assets/**","build.name") #Everything in the mod_assets folder
+    build.classify("game/**.rpyc","build.name") #All the .rpyc files in /game
+    #build.classify("game/**.txt","DDCC") #All the .txt files in game
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
     build.classify('**~', None)
