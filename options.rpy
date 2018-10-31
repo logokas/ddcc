@@ -143,16 +143,11 @@ init python:
 
     # archives to create
     build.archive("DDCC",build.name)
-    #build.archive("mod_assets",build.name)
-    #build.archive("submods",build.name)
 
     # folder / files to put in archives
     build.classify("game/mod_assets/**","DDCC")
-    #build.classify("game/submods/**","submods")
     build.classify('game/**.rpyc',"DDCC")
     build.classify("game/**.txt","DDCC") #All the .txt files in game
-    #build.classify('game/advanced_scripts/**',"scripts")
-    build.classify('game/original_story_scripts/**',"scripts")
 
     # stuff to ignore
     build.classify('**~', None)
@@ -169,9 +164,6 @@ init python:
     build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa',None)
-
-    # stuff not in archive
-    #build.classify('README.html',build.name)
 
     # mark as documentation
     build.documentation('*.html')
