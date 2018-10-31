@@ -6,7 +6,7 @@ sudo: required
 
 # Travis build script for RenPy
 # based on Monika-After-Story script.
-  
+
 # This is the install stage
 # All your dependencies go here. We have done the RenPy SDK part done for you.
 
@@ -20,14 +20,16 @@ install:
     # now this is where it gets interesting
     # we're copying over the template files into the renpy SDK
     # and CD into the renpy
-    
+
     - bash ./ddcc/travis/setup.sh
 
     - cp -vRf ddcc/* mod/game
-    
+
     - bash ddcc/travis/inject_version.sh
-    
-    
+
+    - bash ddcc/travis/patch_renpy.sh
+
+
     - cd renpy
 
 
@@ -38,7 +40,7 @@ env:
 # This is the script part. This is where the actual building is happening.
 # This produces an artifact which we'll use later on to publish a release.
 
-script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd .. 
+script: ./renpy.sh "../mod/" lint && ./renpy.sh launcher distribute "../mod/" && cd ..
 
 
 # This is where the actual releases happen. Travis has the ability to publish releases from GitHub, Amazon S3, OpenShift, etc.
