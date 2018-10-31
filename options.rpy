@@ -15,7 +15,7 @@ define gui.about = _("")
 
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
-define build.name = "Doki Doki Comedy Club"
+define build.name = "DokiDokiComedyClub"
 #define build.directory_name = "DokiDokiComedyClub"
 
 # Controls which sound / music mixers are available
