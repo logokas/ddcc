@@ -4,11 +4,7 @@
 
 # Sanity check first
 
-if  [[ ! -z "$(cat renpy/renpy/defaultstore.py | grep '_menu = False')" ]]; then
-  echo " ----> Line exists. Exiting now.";
-  exit 0;
-
-else
+if  [[ -z "$(cat renpy/renpy/defaultstore.py | grep '_menu = False')" ]]; then
 
   echo " ----> Patching..."
   echo "_menu = False" >> renpy/renpy/defaultstore.py
@@ -17,4 +13,10 @@ else
   echo " ---> Patched. Review the following if this is okay."
   cat renpy/renpy/defaultstore.py | grep '_menu = False';
   exit 0
+
+else
+
+  echo " ----> Line exists. Exiting now.";
+  exit 0;
+
 fi
