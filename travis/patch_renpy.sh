@@ -1,13 +1,15 @@
-!#/bin/bash
+#!/bin/bash
 
 # patches Ren'Py to work with Voice Engines.
 
 # Sanity check first
 
-if  [[ ! -z "$(cat renpy/renpy/defaultstore.py | grep '_menu = False')" ]];
-  echo " ----> Line exists. Exiting now."
+if  [[ ! -z "$(cat renpy/renpy/defaultstore.py | grep '_menu = False')" ]]; then
+  echo " ----> Line exists. Exiting now.";
   exit 0;
+
 else
+
   echo " ----> Patching..."
   echo "_menu = False" >> renpy/renpy/defaultstore.py
 
