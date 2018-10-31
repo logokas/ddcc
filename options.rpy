@@ -2,13 +2,13 @@
 
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Doki Doki Comedy Club!"
+define config.name = "Doki Doki Comedy Club"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = True
 
 # Version of the game
-define config.version = "0.0.2"
+define config.version = "0.0.3"
 
 # text placed on about screen
 define gui.about = _("")
@@ -16,7 +16,6 @@ define gui.about = _("")
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
 define build.name = "DokiDokiComedyClub"
-#define build.directory_name = "DokiDokiComedyClub"
 
 # Controls which sound / music mixers are available
 define config.has_sound = True
@@ -139,19 +138,20 @@ init python:
     # Classify files as None to exclusde them from the built distributions
     #
 
+    # packaged ZIP for distibution
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
 
     # archives to create
-    build.archive("DDCC",build.name)
-    #build.archive("mod_assets",build.name)
-    #build.archive("submods",build.name)
+    build.archive("scripts",build.name)
+    build.archive("mod_assets",build.name)
+    build.archive("submods",build.name)
 
     # folder / files to put in archives
     build.classify("game/mod_assets/**","mod_assets")
-    #build.classify("game/submods/**","submods")
+    build.classify("game/submods/**","submods")
     build.classify('game/**.rpyc',"scripts")
-    #build.classify('game/advanced_scripts/**',"scripts")
-    #build.classify('game/original_story_scripts/**',"scripts")
+    build.classify('game/advanced_scripts/**',"scripts")
+    build.classify('game/original_story_scripts/**',"scripts")
 
     # stuff to ignore
     build.classify('**~', None)
@@ -168,35 +168,11 @@ init python:
     build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa',None)
-    
-    # packaged ZIP for distibution
-    #build.package(build.directory_name + "Mod",'zip',build.name,description='DDLC Compatible Mod')
-    #build.archive("DDCC", "all") #Put everything labeled "DDCC" into an archive called DDCC
-    #build.classify("game/mod_assets/**","build.name") #Everything in the mod_assets folder
-    #build.classify("game/**.rpyc","build.name") #All the .rpyc files in /game
-    #build.classify("game/**.txt","DDCC") #All the .txt files in game
-    #build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
-    #build.classify('**~', None)
-    #build.classify('**.bak', None)
-    #build.classify('**/.**', None)
-    #build.classify('**/#**', None)
-    #build.classify('**/thumbs.db', None)
-    #build.classify('**.rpy', None)
-    #build.classify('**.psd', None)
-    #build.classify('**.sublime-project', None)
-    #build.classify('**.sublime-workspace', None)
-    #build.classify('/music/*.*', None)
-    #build.classify('script-regex.txt', None)
-    #build.classify('/game/10', None)
-    #build.classify('/game/cache/*.*', None)
-    #build.classify('**.rpa',None)
+    # stuff not in archive
+    build.classify('README.html',build.name)
 
-    ## Files matching documentation patterns are duplicated in a mac app build,
-    ## so they appear in both the app and the zip file.
-
-    build.documentation('*.html')
-    build.documentation('*.txt')
-    build.documentation('*.md')
+    # mark as documentation
+    build.documentation('README.html')
 
     build.include_old_themes = False
