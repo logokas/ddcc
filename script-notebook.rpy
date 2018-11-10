@@ -9,7 +9,7 @@ init -200 python:
     skits.append(skit_template)
 
 
-label terra_ddcc(preserve_transition=True):
+label terra_ddcc(preserve_transition=False):
 
     # Stuff this does!:
         # Imagemap/hotspots and how they work
