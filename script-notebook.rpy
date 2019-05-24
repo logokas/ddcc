@@ -9,7 +9,7 @@ init -200 python:
     skits.append(skit_template)
 
 
-label terra_ddcc(preserve_transition=False):
+label terra_ddcc(preserve_transition=True):
 
     # Stuff this does!:
         # Imagemap/hotspots and how they work
@@ -28,7 +28,8 @@ label terra_ddcc(preserve_transition=False):
 
     stop music fadeout 2.0
     scene bg club_day
-    with dissolve_scene_full
+    if preserve_transition == True:
+        with dissolve_scene_full
     play music t3
     show monika 5a at f11 zorder 2
     m "Hi, [player]!"
