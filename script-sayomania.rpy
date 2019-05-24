@@ -13,29 +13,22 @@ define audio.sayomania_01 = "mod_assets/sayomania/sayomania_bgm01.ogg"
 image s_kill_sonic:
     subpixel True
     "mod_assets/sayomania/sayomania_sonic_kill.png"
-# If you don't want to use one of the original game's thumbnails (e.g. club_date, corridor_date, class_date), then define it here.
-#CPG Yuri note: if the skit is accepted, somebody please set this to the Sayori Bedroom thumbnail, thank you!
-image template_thumbnail = "mod_assets/template/template_thumbnail.png"
 
-# First, we need to add our skit to the list of skits that the game looks at.
 init -200 python:
     skit_template = Skit(
-        "Sayo-nara: Mania Adventures edition", # Set this to be the title of your skit.
-        "sayomania", # Set this to be the label that you call below.
-        "template_thumbnail" # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "Sayo-nara: Mania Adventures edition",
+        "sayomania", 
+        "sayori_room_date" 
     )
 
-    skits.append(skit_template) # Add your skit to the list! Make sure it matches the name above.
+    skits.append(skit_template)
 
 # Now, for the actual scene:
-label sayomania(preserve_transition=True): # Don't change the preserve_transition part, but rename "template" to what you want your label to be.
+label sayomania(preserve_transition=True):
 
-    scene bg club_day # Whatever scene you want
+    scene bg club_day 
     if preserve_transition == True:
         with dissolve_scene_full
-        # You can have whatever transition effects you want at the start of your script, as long as you put them in this if block.
-        # This is used for triggering the transition depending on whether or not someone is going through the game in "Play All" mode,
-        # or through scene selection.
     
     play music t2
     $ n_name = "Sonic" #Borrowing Natsuki's name variable and changing it to Sonic for this skit only
@@ -44,7 +37,7 @@ label sayomania(preserve_transition=True): # Don't change the preserve_transitio
     m "You're the first one here."
     m "Thanks for being early!"
     m 1d "I'm surprised you didn't bring Sayori with you."
-    mc 1h "Yeah, she overslept again as always. She doesn't even answer my calls."
+    mc "Yeah, she overslept again as always. She doesn't even answer my calls."
     m 1k "Ahaha~!"
     stop music
     m "{i}You kind of left her hanging this morning, you know?{/i}"
