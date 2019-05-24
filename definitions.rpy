@@ -145,6 +145,7 @@ image club_date = im.FactorScale("bg/club.png", 0.15, 0.15)
 image residential_day_date = im.FactorScale("bg/residential.png", 0.15, 0.15)
 image stalker_date = im.FactorScale("mod_assets/stalker/stalker_bg01.png", 0.15, 0.15)
 image monika_room_date = im.FactorScale("cg/monika/monika_bg_glitch.png", 0.15, 0.15)
+image sayori_room_date = im.FactorScale("bg/sayori_bedroom.png", 0.15, 0.15)
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
