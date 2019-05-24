@@ -5,4 +5,4 @@ define audio.cokie_sfx_whoosh = "mod_assets/cokie/cokie_sfx_whoosh.wav" #Whoosh 
 
 image cokie_n_cookie = "mod_assets/cokie/cokie_n_cookie.png" #Cookie sprite from Cookie Cliker.
 
-image cokie_thumbnail = "mod_assets/cokie/cokie_thumbnail.png" #The Thumbnail.
+image cokie_thumbnail = im.FactorScale("mod_assets/cokie/cokie_thumbnail.png", 0.3, 0.3) #The Thumbnail.
