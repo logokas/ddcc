@@ -1,11 +1,9 @@
 ﻿
-image ctalks_thumnail = "images/bg/club.png"
-
 init -200 python:
     skit_ctalk = Skit(
         "A talk with the club",
         "ctalk", 
-        "ctalks_thumbnail"
+        "club_date"
     )
 
     skits.append(skit_ctalk)
@@ -92,7 +90,7 @@ label yurictalk1:
     y 1f "I'm sure you understand what I mean."
     y 1q "That was so embarrasing..."
     y 3n "Unless you liked it?"
-    show y 1g
+    show yuri 1g
     menu:
         y "Did you like it?"
         "Yes":
@@ -125,6 +123,7 @@ label yurictalk1:
     image yprestab = "images/yuri/stab/1.png"
     show yprestab
     y "Hahaha!"
+    hide yprestab
     y 1y2 "I think I should stop."
     jump yanend
 
