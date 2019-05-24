@@ -9,7 +9,7 @@ define audio.printer_bgm01 = "<to 74.341 loop 5.777>mod_assets/printer/printer_b
 define audio.printer_sfx_error = "mod_assets/printer/printer_sfx_error.ogg" #Windows XP Error SFX.
 image printer_p_printer = "mod_assets/printer/printer_p_printer.png" #A printer I just found in google. Can't remember the name of it.
 image printer_p_magenta = "mod_assets/printer/printer_p_magenta.png" #A Magenta cartridge I also just found in google.
-image printer_thumbnail = "mod_assets/printer/printer_thumbnail.png" #Thumbnail
+image printer_thumbnail = im.FactorScale("mod_assets/printer/printer_thumbnail.png", 0.3, 0.3) #Thumbnail
 
 #List of Text-To-Speech (Paul) voices below by Oddcast.
 define audio.printer_v01 = "mod_assets/printer/printer_v01.ogg" # "Printing error. Give me the magenta ink."
