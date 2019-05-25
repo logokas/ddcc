@@ -139,6 +139,8 @@ image bg kitchen = "bg/kitchen.png"
 image bg notebook = "bg/notebook.png"
 image bg notebook-glitch = "bg/notebook-glitch.png"
 
+image room_glitch = "images/cg/monika/monika_bg_glitch.png"
+
 image class_date = im.FactorScale("bg/class.png", 0.15, 0.15)
 image corridor_date = im.FactorScale("bg/corridor.png", 0.15, 0.15)
 image club_date = im.FactorScale("bg/club.png", 0.15, 0.15)
