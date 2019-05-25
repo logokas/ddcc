@@ -7,6 +7,8 @@ init -200 python:
         "club_date" #Thumbnail
     )
 
+    skits.append(skit_ddcc)
+
 ## The Explanation
 ## Radio sound effects from Freesound.org
 
