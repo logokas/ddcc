@@ -142,12 +142,12 @@ init python:
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
     # archives to create
-    build.archive("DDCC",build.name)
+    build.archive("scripts",build.name)
 
     # folder / files to put in archives
-    build.classify("game/mod_assets/**","DDCC")
-    build.classify('game/**.rpyc',"DDCC")
-    build.classify("game/**.txt","DDCC") #All the .txt files in game
+    build.classify("game/mod_assets/**","scripts")
+    build.classify('game/**.rpyc',"scripts")
+    build.classify("game/**.txt","scripts") #All the .txt files in game
 
     # stuff to ignore
     build.classify('**~', None)
