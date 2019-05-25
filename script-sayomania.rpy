@@ -92,4 +92,4 @@ label sayomania(preserve_transition=True):
     "And that's the story about how Sayori and I missed the Festival Day. It was the best day ever, after all."
     $ n_name = "Natsuki" #giving Natsuki her name back.
 
-    return
+return
