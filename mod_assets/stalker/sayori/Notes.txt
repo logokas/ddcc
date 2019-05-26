@@ -1,1 +1,0 @@
-You can use face sprites from the original game. The face sprite displayable should the most upper while compositing and have fm.png as its alpha mask
