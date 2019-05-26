@@ -1,7 +1,6 @@
 # Entry point
 label start:
     stop music fadeout 1.5
-
     python:
         for script in skits:
             if script.call_label == "ddcc":

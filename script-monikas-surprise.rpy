@@ -5,7 +5,8 @@ init -200 python:
     skit_monikas_surprise = Skit(
         "Monika's Surprise", # Title
         "monikas_surprise", # Label
-        "monika_room_date" #Thumbnail
+        "monika_room_date", #Thumbnail
+        "Tormuse"
     )
 
     skits.append(skit_monikas_surprise)

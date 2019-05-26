@@ -4,7 +4,8 @@ init -200 python:
     skit_external_monologue = Skit(
         "External Monologue", # Title
         "external_monologue", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "Tormuse"
     )
 
     skits.append(skit_external_monologue)

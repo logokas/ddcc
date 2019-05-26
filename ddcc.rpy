@@ -4,7 +4,8 @@ init -200 python:
     skit_ddcc = Skit(
         "What is DDCC?", # Title
         "ddcc", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "The DDCC Team"
     )
 
 ## The Explanation

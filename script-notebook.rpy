@@ -4,7 +4,8 @@ init -200 python:
     skit_template = Skit(
         "The Missing Notebook",
         "terra_ddcc",
-        "club_date"
+        "club_date",
+        "Terra#2060"
     )
     skits.append(skit_template)
 

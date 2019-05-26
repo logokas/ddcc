@@ -17,7 +17,8 @@ init -200 python:
     skit_template = Skit(
         "Sayo-nara: Mania Adventures edition",
         "sayomania", 
-        "sayori_room_date" 
+        "sayori_room_date",
+        "CPG Yuri"
     )
 
     skits.append(skit_template)
