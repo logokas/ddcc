@@ -9,7 +9,8 @@ init -200 python:
     skit_stop = Skit(
         "Stop", # Title
         "stop", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "@Chronos#1609, /u/chronoshag"
     )
 
     skits.append(skit_stop)

@@ -48,7 +48,8 @@ init -200 python:
     skit_cokie = Skit(
         "The Cookie", 
         "script_cokie", 
-        "cokie_thumbnail"
+        "cokie_thumbnail",
+        "/u/AinsleyHairyott"
     )
 
     skits.append(skit_cokie)

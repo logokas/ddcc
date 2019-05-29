@@ -4,7 +4,8 @@ init -200 python:
     skit_stalker = Skit(
         "S.T.A.L.K.E.R.", # Title
         "stalker", # Label
-        "stalker_date" #Thumbnail
+        "stalker_date", #Thumbnail
+        "@CampinKarl#8524, /u/CampinKate"
     )
 
     skits.append(skit_stalker)
