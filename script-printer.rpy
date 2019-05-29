@@ -34,7 +34,8 @@ init -200 python:
     skit_printer = Skit(
         "The Annoying Printer", 
         "script_printer", 
-        "printer_thumbnail" 
+        "printer_thumbnail",
+        "/u/AinsleyHairyott"
     )
 
     skits.append(skit_printer) 

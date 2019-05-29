@@ -4,7 +4,8 @@ init -200 python:
     skit_management = Skit(
         "Under New Management", # Title
         "under_new_management", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "@Chronos#1609, /u/chronoshag"
     )
 
     skits.append(skit_management)
