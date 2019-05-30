@@ -4,7 +4,7 @@
 define audio.badumtss = "mod_assets/punclub/punclub_sfx_badumtss.wav"
 
 #image punclub_thumbnail = "mod_assets/punclub/punclub_thumbnail.png"
-image punclub_thumbnail = "gui/poemgame/y_sticker_1.png" #Testing, this image appears to be far too fucking big
+image punclub_thumbnail = im.FactorScale("mod_assets/punclub/punclub_thumbnail.png",0.3,0.3)
 image sayori wink = "mod_assets/punclub/punclub_s_wink.png"
 image yuri wink = "mod_assets/punclub/punclub_y_wink.png"
 image natsuki wink = "mod_assets/punclub/punclub_n_wink.png"
