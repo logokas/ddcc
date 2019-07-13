@@ -1,5 +1,6 @@
 # Fast-Forward - MrGraves#9413
 
+define mouseCounter = 0
 image fast-forward_thumbnail = im.FactorScale("mod_assets/fast-forward/fast-forward_thumbnail.png",0.3,0.3)
 
 init -200 python:
@@ -187,7 +188,7 @@ label fast_forward(preserve_transition=True):
     mc "{cps=400}Y-You too, Monika.{/cps}{nw}"
     $ m_name = "Monika"
     m "{cps=60}What on earth is going on around here!{/cps}{w=0.2}{nw}"
-    show monika 5b at l42
+    show monika 5b at l11
     show sayori 4p at t43
     play sound "sfx/fall.ogg"
     pause 0.3
@@ -222,8 +223,11 @@ label fast_forward(preserve_transition=True):
     show sayori 4m zorder 2 at t33
     n "{cps=60}SOMEBODY STOP THIS I'M GONNA *HURK*--{/cps}{w=0.2}{nw}"
     "{cps=400}Sayori talks with her mouth full and has already managed to get icing on her face.{/cps}{nw}"
+    show natsuki vomit at t43
     "{cps=400}Is she waiting for me to take a bite?{/cps}{nw}"
+    show natsuki at lhide
     mc "{cps=400}This is really good.{/cps}{nw}"
+    hide natsuki
     "{cps=400}{i}(Haven't I heard this somewhere before...?){/i}{/cps}{nw}"
     "{cps=400}I give up on Natsuki's weird logic and dismiss the conversation.{/cps}{nw}"
     "{cps=400}Yuri returns to the table, carrying a tea set.{/cps}{nw}"
@@ -361,12 +365,33 @@ label fast_forward(preserve_transition=True):
     stop music
     play sound "gui/sfx/select.ogg"    
     "..."
+    menu:
+        "Wait.":
+            pass
+    menu:
+        "...Did I miss something?":
+            pass
+    menu:
+        "Maybe I should just...":
+            pass
     pause 2.0
     play sound "gui/sfx/select.ogg"    
     show image "mod_assets/fast-forward/fast-forward_bg00.png"
-    pause 4.0
+    pause 0.5
+    python:
+        for mouseCounter in range(0, 50):
+            currentpos = renpy.get_mouse_pos()
+            targetpos = [610, 193]
+            renpy.display.draw.set_mouse_pos((currentpos[0] * 9 + targetpos[0]) / 10.0, (currentpos[1] * 9 + targetpos[1]) / 10.0)
+            renpy.pause(0.04,True)
     show image "mod_assets/fast-forward/fast-forward_bg01.png"
-    pause 2.0
+    pause 0.5
+    python:
+        for mouseCounter in range(0, 50):
+            currentpos = renpy.get_mouse_pos()
+            targetpos = [148, 489]
+            renpy.display.draw.set_mouse_pos((currentpos[0] * 9 + targetpos[0]) / 10.0, (currentpos[1] * 9 + targetpos[1]) / 10.0)
+            renpy.pause(0.04,True)
     play sound "gui/sfx/hover.ogg"    
     show image "mod_assets/fast-forward/fast-forward_bg02.png"
     pause 2.0
