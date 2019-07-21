@@ -4,7 +4,7 @@
 # No need to change anything below the replacer variable.
 # Just change the value of replacer, the script will do everything for you
  
-replacer="0.0.3"
+replacer="0.0.5"
 
 if [ ! -z $TRAVIS_TAG ]; then
   echo " ---> Tag exists, using tag."
