@@ -5,8 +5,8 @@ init -200 python:
         "club_date", #Thumbnail
         "@KarasilSothren#9772, /u/Karasilsothren"
     )
-
     skits.append(skit_nocallnatcute)
+
 transform rocket(x=640, z=0.80):
     xcenter x yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
     easein .1 yoffset -20
@@ -65,6 +65,7 @@ transform rocket22:
     rocket(880)
 transform rocket11:
     rocket(640)
+
 label natcute(preserve_transition=True):
     scene bg club_day
     if preserve_transition == True:
@@ -91,7 +92,7 @@ label natcute(preserve_transition=True):
     show yuri at t43, behind natsuki
     show sayori at t44
     show monika at l41
-    m 4k "Hey who brought the cutie. Oh wait never mind it's just Natsuki"
+    m 4k "Hey who brought the cutie. Oh wait never mind it's just Natsuki."
     show natsuki 1w
     "It looks like Nat's about to blow a fuse."
     show natsuki 1v at rocket42
