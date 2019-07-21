@@ -13,6 +13,7 @@ label club_talk(preserve_transition=True):
     if preserve_transition == True:
         with dissolve_scene_full
     jump ctalking
+
 label ctalking:
     image yglitchheadperson: 
         xoffset 334
@@ -23,6 +24,7 @@ label ctalking:
     image yuri 3gh = LiveComposite((960, 960), (0, 0), "yglitchheadperson", (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png")
     play music t10
     default ctalkfin  = 0
+
 label ctalkingloop:
     menu:
         "Who do you wish to talk to?"
@@ -41,6 +43,8 @@ label ctalkingloop:
     scene black with dissolve_scene_full
     stop music fadeout 2.0
     pause 2.0
+    if preserve_transition == False:
+        $ transition_glitch_intro = False
     return
 
 label sayorictalk1:
@@ -71,7 +75,7 @@ label natsukictalk1:
     n 1q "Then maybe things could be better."
     n 4g "That doesn't mean you can make me super cutesy though."
     n 5e "Sayori will tell me if you do."
-    n 1m "I just don't want to be hated for how I was, I wanted accepted for who I am."
+    n 1m "I just don't want to be hated for how I was, I want to be accepted for who I am."
     n 1r "So if you could do that,"
     n 1t "Then maybe things could be better."
     n 1u "Thanks for talking to me though, I appreciate it [player]."
