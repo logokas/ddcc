@@ -6,7 +6,7 @@ init -200 python:
         "@KarasilSothren#9772, /u/Karasilsothren"
     )
 
-    skits.append(skit_club_talk)
+    # skits.append(skit_club_talk)
 
 label club_talk(preserve_transition=True):
     scene bg club_day
@@ -52,16 +52,16 @@ label sayorictalk1:
     s "Ehehe, hey [player]."
     s 1x "I hope you've been well."
     s 1p "I just wanted talk with you for a little bit."
-    s 1k "I know that there is a lot of mods for us now."
+    s 1k "I know that there are a lot of mods for us now."
     s 4d "I'm glad that there is."
     s 1a "I'm glad that I can see everyone happy at times. Even me."
     s 4q "I can't thank you enough."
     s 4r "Just keep making those mods!"
     s 1h "Just be nice."
     s 1d "We may be be fictional, but we can still be people."
-    s 1k "Just be kind that's all I ask."
+    s 1k "Just be kind, that's all I ask."
     s 4r "Thanks for talking with me again [player], I really enjoyed it."
-    s 1a "Good bye for now."
+    s 1a "Goodbye for now."
     show sayori at thide
     hide sayori
     return
@@ -77,7 +77,7 @@ label natsukictalk1:
     n 5e "Sayori will tell me if you do."
     n 1m "I just don't want to be hated for how I was, I want to be accepted for who I am."
     n 1r "So if you could do that,"
-    n 1t "Then maybe things could be better."
+    n 1t "then maybe things could be better."
     n 1u "Thanks for talking to me though, I appreciate it [player]."
     n 1z "See you later!"
     show natsuki at thide
@@ -100,7 +100,7 @@ label yurictalk1:
     pause 1.0
     show yuri 1j
     y "Sorry [player]."
-    y "I just was so nervous when you came."
+    y "I was just so nervous when you came."
     y "I don't want to be to weird."
     y 1f "I'm sure you understand what I mean."
     y 1q "That was so embarrasing..."
@@ -113,7 +113,7 @@ label yurictalk1:
             y 1y1 "Oh you did?"
             pass
         "No":
-            y 1o "Thank you that was so embarrassing."
+            y 1o "Thank you. that was so embarrassing."
             jump yanend
     play music "sfx/eyes.ogg"
     y 1y3 "Is this the me you like to be around?"
@@ -154,7 +154,7 @@ label yurictalk1:
 label yanend:
     stop music
     y 1q "I don't think I could have continued doing that."
-    y 1j "If we could put that past me behind us that would be pleasent."
+    y 1j "If we could put that past me behind us that would be pleasant."
     y 1g "Unless you don't want to."
     y "That's up to you though."
     y 1n "I-I'm just going to go now."
@@ -170,19 +170,19 @@ label monikactalk1:
     show monika 1g at t11
     m "Hey [player]."
     m 1o "..."
-    m 1m "It might have been sometime since we last talked."
+    m 1m "It may have been some time since we last talked."
     m 1n "It's nice being able to do this."
     m 1k "I missed this."
-    m 1p "But do I even deserve something like this."
-    m 1g "How I acted in the original game can not be forgotten."
+    m 1p "But, do I even deserve something like this?"
+    m 1g "How I acted in the original game cannot be forgotten.."
     m 1f "No matter how many mods people make."
-    m 1p "I know not everyone will ever forgive me, it's the nature of people in your reality."
-    m 1n "But if I get to talk to you for a little bit."
+    m 1p "I know not everyone will ever forgive me. It's the nature of people in your reality."
+    m 1n "But if I get to talk to you for a little bit,"
     m 4k "I'll take it."
     m 1p "Just know this."
     m 1g "People are there for you."
-    m 1o "Whether they are fiction, across the internet."
-    m 1m "Or even someone you see everyday."
+    m 1o "Whether they are fiction, across the internet,"
+    m 1m "Or even someone you see every day."
     m 4q "Just know this."
     m 4k "We can be there for you."
     m 1g "You only need to ask."
@@ -190,7 +190,7 @@ label monikactalk1:
     m 1f "Please, don't forget us."
     m 5a "Not just for me but for everyone, okay?"
     m 1a "I guess this goodbye for now [player]."
-    m 4e "Catch you in the next mod [player]."
+    m 4e "Catch you in the next mod, [player]."
     show monika at thide
     hide monika
     return
