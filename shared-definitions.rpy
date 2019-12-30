@@ -1,12 +1,13 @@
 # Definitions for extra audio channels
 # Added by SuperHatGuy#1795
 
-renpy.music.register_channel("music2", mixer="music", loop=True, tight=True)
-renpy.music.register_channel("music3", mixer="music", loop=True, tight=True)
-renpy.music.register_channel("sound2", mixer="sfx", loop=False, tight=False)
-renpy.music.register_channel("sound3", mixer="sfx", loop=False, tight=False)
-renpy.music.register_channel("voice2", mixer="voice", loop=False, tight=False)
-renpy.music.register_channel("voice3", mixer="voice", loop=False, tight=False)
+init python:
+    renpy.music.register_channel("music2", mixer="music", loop=True, tight=True)
+    renpy.music.register_channel("music3", mixer="music", loop=True, tight=True)
+    renpy.music.register_channel("sound2", mixer="sfx", loop=False, tight=False)
+    renpy.music.register_channel("sound3", mixer="sfx", loop=False, tight=False)
+    renpy.music.register_channel("voice2", mixer="voice", loop=False, tight=False)
+    renpy.music.register_channel("voice3", mixer="voice", loop=False, tight=False)
 
 # Definitions for Main Character
 # Sprites by Childish-N
