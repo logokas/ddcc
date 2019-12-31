@@ -14,10 +14,9 @@
 #    https://creativecommons.org/publicdomain/zero/1.0/
 
 # If you don't want to use one of the original game's thumbnails (e.g. club_date, corridor_date, class_date), then define it here.
-#image template_thumnail = "mod_assets/template/template_thumbnail.png"
+image ayuskit_thumbnail = "mod_assets/ayuskit/ayuskit_thumbnail.png"
 
 # First, we need to add our skit to the list of skits that the game looks at.
-image ayuskit_thumbnail = "mod_assets/ayuskit/ayuskit_thumbnail.png"
 init -200 python:
     ayuskit_skit = Skit(
         "Flightless Comedy", # Set this to be the title of your skit.
