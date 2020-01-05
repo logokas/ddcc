@@ -1,10 +1,8 @@
-# Skit template by Ceane
-# This template should help you get going, and set up your own skit to be compatible with the rest of the game.
-# Author of the skit, and any credits for assets or parts of code should be commented here, at the start of the file
-
+####### Credits #######
 
 # Writer: PattAttack#3007
 # Programmer: SuperHatGuy#1795
+
 # Ayumi sprites: Cyrke#8043
 # Music: Hyperfun by Kevin MacLeod (incompetech.com)
 #    Licensed under Creative Commons: By Attribution 3.0 License
@@ -13,29 +11,29 @@
 #    Licensed under Creative Commons: By Attribution 1.0 License
 #    https://creativecommons.org/publicdomain/zero/1.0/
 
-# If you don't want to use one of the original game's thumbnails (e.g. club_date, corridor_date, class_date), then define it here.
+
+####### Skit #######
+
 image ayuskit_thumbnail = "mod_assets/ayuskit/ayuskit_thumbnail.png"
 
-# First, we need to add our skit to the list of skits that the game looks at.
 init -200 python:
     ayuskit_skit = Skit(
-        "Flightless Comedy", # Set this to be the title of your skit.
-        "ayuskit_label", # Set this to be the label that you call below.
-        "ayuskit_thumbnail" # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "Flightless Comedy", # Title
+        "ayuskit_label", # Label
+        "ayuskit_thumbnail", # Thumbnail
+        "PattAttack#3007", # Authors: PattAttack#3007 & SuperHatGuy#1795
     )
+    skits.append(ayuskit_skit)
 
-    skits.append(ayuskit_skit) # Add your skit to the list! Make sure it matches the name above.
 
-# Now, for the actual scene:
-label ayuskit_label(preserve_transition=True): # Don't change the preserve_transition part, but rename "template" to what you want your label to be.
+####### Scene #######
+
+label ayuskit_label(preserve_transition=True):
 
     stop music fadeout 2.0
-    scene black # Whatever scene you want
+    scene black
     if preserve_transition == True:
         with dissolve_scene_full
-        # You can have whatever transition effects you want at the start of your script, as long as you put them in this if block.
-        # This is used for triggering the transition depending on whether or not someone is going through the game in "Play All" mode,
-        # or through scene selection.
 
     #Title across screen - black screen
     show expression "mod_assets/ayuskit/ayuskit_gfx_title.png" as ayuskit_title zorder 0:
