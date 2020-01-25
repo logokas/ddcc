@@ -12,7 +12,8 @@ init -200 python:
     skit_merchandise = Skit(
         "Merchandise", # Set this to be the title of your skit.
         "merchandise", # Set this to be the label that you call below.
-        "merchandise_thumbnail" # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "merchandise_thumbnail", # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "@Chiff the Oblivious#4251" # Author
     )
 
     skits.append(skit_merchandise) # Add your skit to the list! Make sure it matches the name above.
