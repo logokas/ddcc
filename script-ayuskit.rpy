@@ -460,8 +460,8 @@ label ayuskit_label(preserve_transition=True):
     y 2h "Yes, and I shall retrieve the cupcakes."
     show yuri at ayuskit_tc(880)
 
-    stop music fadeout 2.0
-    scene black
-    with dissolve_scene_full
+    #stop music fadeout 2.0
+    #scene black
+    #with dissolve_scene_full
 
     return
