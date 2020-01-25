@@ -206,7 +206,13 @@ image tos2 = "bg/warning2.png"
 
 
 label splashscreen:
-
+    ## devmode check
+    default devmode = ['Devmode', 'Logokas', 'Ceane', 'Hanaka']
+    python:
+        for x in devmode:
+            if player in devmode:
+                config.developer = True
+                renpy.notify('Developer Mode Enabled')
     #If this is the first time the game has been run, show a disclaimer
     default persistent.first_run = False
     if not persistent.first_run:

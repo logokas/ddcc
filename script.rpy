@@ -58,21 +58,25 @@ screen scenechoice2:
     textbutton "<<< Previous" action Jump("Choice2") xcenter .38 ycenter .95 style "monika_text" hover_sound "gui/sfx/hover.ogg" activate_sound "sfx/pageflip.ogg"
 
 label choose:
-   scene bg notebook with Dissolve(0.5, alpha=True)
-   play music t4
-   label Choice2:
-       hide screen scenechoice2
-       show screen scenechoice1
-   if False:
-       label Choice1:
-           hide screen scenechoice1
-           show screen scenechoice2
-   while True:
-       pause 50.0
+    play music t4
+    show screen scene_select()
+    pause
+    #scene bg notebook with Dissolve(0.5, alpha=True)
+    #play music t4
+    #label Choice2:
+    #   hide screen scenechoice2
+    #   show screen scenechoice1
+    #if False:
+    #   label Choice1:
+    #       hide screen scenechoice1
+    #       show screen scenechoice2
+    #while True:
+    #   pause 50.0
+    return #This return will send us back to the title screen after the skit we picked is done.
 
 label cleanJump:
    hide screen scenechoice1
    hide screen scenechoice2
    hide screen main_menu
    stop music fadeout 2.0
-   jump expression jumpLabel
+   #jump expression jumpLabel
