@@ -444,13 +444,13 @@ screen navigation():
         if not persistent.autoload or not main_menu:
 
             if main_menu:
-
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
-                else:
-                    textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
-
-                    #textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                #Don't need/intend to change the play button like this.
+                #if persistent.playthrough == 1:
+                #    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
+                #else:
+                if config.developer:
+                    textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
 
             else:
 
@@ -1586,6 +1586,30 @@ style notify_frame:
 
 style notify_text:
     size gui.notify_text_size
+
+
+screen scene_select():
+    #Note: Screens predict faster if you give them an empty parameter list - the ().
+    modal True #Make it so we can't dismiss the screen by clicking through it.
+    imagemap:
+        ground "bg/notebook.png" #Easiest way to set a background for a screen is imagemap - ground.
+    vpgrid: #Viewport + Grid.
+        cols 2
+        rows len(skits) #We want a row for every skit.
+        mousewheel True #This lets us scroll the viewport with the mousewheel.
+        scrollbars True #This puts a scrollbar on the side of the viewport.
+        side_xalign 0.5 #Because we have a scrollbar, we need side_xalign instead of xalign.
+        for i in range(len(skits)): #For every skit
+            imagebutton: #Make a button
+                idle skits[i].thumbnail #Idle image is the thumbnail
+                action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+                #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
+            text skits[i].name style "monika_text" #Next to the button, have text with the skit's name.
+init python:
+    #Cleanup function for scene_select screen
+    def scene_select_cleanup(label):
+        renpy.hide_screen("scene_select") #Hide the screen
+        renpy.call(label) #Call the picked label.
 
 screen credits_screen():
     tag menu
