@@ -3,7 +3,7 @@
 # Author of the skit, and any credits for assets or parts of code should be commented here, at the start of the file
 
 # If you don't want to use one of the original game's thumbnails (e.g. club_date, corridor_date, class_date), then define it here.
-image template_thumnail = "images/bg/club.png"
+image template_thumbnail = "images/bg/club.png"
 transform t51:
     tcommon(140)
 transform t61:
