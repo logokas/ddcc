@@ -4,7 +4,8 @@ init -200 python:
     skit_backups = Skit(
         "Good thing she keeps backups", # Title
         "backups", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "@Chronos#1609, /u/chronoshag"
     )
 
     skits.append(skit_backups)

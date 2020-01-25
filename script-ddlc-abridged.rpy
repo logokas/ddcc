@@ -4,7 +4,8 @@ init -200 python:
     skit_ddlc_abridged = Skit(
         "DDLC Abridged", # Title
         "ddlc_abridged", # Label
-        "residential_day_date" #Thumbnail
+        "residential_day_date", #Thumbnail
+        "@Chronos#1609, /u/chronoshag"
     )
 
     skits.append(skit_ddlc_abridged)

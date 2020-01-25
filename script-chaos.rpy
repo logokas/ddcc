@@ -7,7 +7,8 @@ init -200 python:
     skit_chaos = Skit(
         "Chaos", # Title
         "chaos", # Label
-        "club_date" #Thumbnail
+        "club_date", #Thumbnail
+        "@Logokas#5981, /u/Logokas"
     )
 
     skits.append(skit_chaos)

@@ -13,7 +13,8 @@ init -200 python:
     skit_punclub = Skit(
         "Pun Club",
         "punclub",
-        "punclub_thumbnail"
+        "punclub_thumbnail",
+        "@VirtualKibou#0811, /u/VirtualKibou"
     )
 
     skits.append(skit_punclub)

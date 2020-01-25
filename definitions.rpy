@@ -139,6 +139,8 @@ image bg kitchen = "bg/kitchen.png"
 image bg notebook = "bg/notebook.png"
 image bg notebook-glitch = "bg/notebook-glitch.png"
 
+image room_glitch = "images/cg/monika/monika_bg_glitch.png"
+
 image class_date = im.FactorScale("bg/class.png", 0.15, 0.15)
 image corridor_date = im.FactorScale("bg/corridor.png", 0.15, 0.15)
 image club_date = im.FactorScale("bg/club.png", 0.15, 0.15)
@@ -1414,10 +1416,10 @@ default natsuki_23 = None
 
 init -201 python:
     class Skit:
-        def __init__(self, name, call_label, thumbnail):
+        def __init__(self, name, call_label, thumbnail, author):
             self.name = name
             self.call_label = call_label
             self.thumbnail = thumbnail
-
+            self.author = author
     skits = []
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

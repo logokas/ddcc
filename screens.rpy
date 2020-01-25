@@ -471,6 +471,7 @@ screen navigation():
                     textbutton _("Main Menu") action NullAction()
 
             textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+            textbutton _("Credits") action [ShowMenu("credits_screen"), SensitiveIf(renpy.get_screen("credits_screen") == None)]
 
             #textbutton _("About") action ShowMenu("about")
 
@@ -478,12 +479,10 @@ screen navigation():
 
                 ## Help isn't necessary or relevant to mobile devices.
                 textbutton _("Help!") action OpenURL("http://reddit.com/r/DDLCMods")
-
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
             timer 1.75 action Start("autoload_yurikill")
-
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
@@ -1588,6 +1587,7 @@ style notify_frame:
 style notify_text:
     size gui.notify_text_size
 
+
 screen scene_select():
     #Note: Screens predict faster if you give them an empty parameter list - the ().
     modal True #Make it so we can't dismiss the screen by clicking through it.
@@ -1610,3 +1610,22 @@ init python:
     def scene_select_cleanup(label):
         renpy.hide_screen("scene_select") #Hide the screen
         renpy.call(label) #Call the picked label.
+
+screen credits_screen():
+    tag menu
+    use game_menu(_("Credits"), scroll="viewport"):
+        python:
+            title_list = []
+            author_list = []
+            for x in skits:
+                title_list.append("\"" + x.name +"\"" +"\n")
+                author_list.append(x.author + "\n")
+        hbox:
+            vbox:
+                text "Skit Name:"
+                text ""
+                text title_list
+            vbox:
+                text "Skit Author:"
+                text ""
+                text author_list
