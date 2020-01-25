@@ -259,9 +259,12 @@ screen input(prompt):
     window:
 
         vbox:
-            xpos gui.text_xpos
-            xanchor 0.5
-            ypos gui.text_ypos
+#            xpos gui.text_xpos
+#            xanchor 0.5
+#            ypos gui.text_ypos
+            xalign 0.5
+            yalign 0.5
+            spacing 30
 
             text prompt style "input_prompt"
             input id "input"
@@ -514,22 +517,38 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-#Just add Monika art now!
-    
-    #   if persistent.ghost_menu:
-    #      add "white"
-    #     add "menu_art_y_ghost"
-    #    add "menu_art_n_ghost"
-    #    else:
-    add "menu_bg"
-        #add "menu_art_y"
-        #add "menu_art_n"
+    if persistent.ghost_menu:
+         add "white"
+         add "menu_art_y_ghost"
+         add "menu_art_n_ghost"
+    else:
+        add "menu_bg"
+        add "menu_art_y"
+        add "menu_art_n"
     frame:
         pass
 
 ## The use statement includes another screen inside this one. The actual
 ## contents of the main menu are in the navigation screen.
     use navigation
+
+    if not persistent.ghost_menu:
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_particles"
+        add "menu_logo"
+    if persistent.ghost_menu:
+        add "menu_art_s_ghost"
+        add "menu_art_m_ghost"
+    else:
+        if persistent.playthrough == 1 or persistent.playthrough == 2:
+            add "menu_art_s_glitch"
+        else:
+            add "menu_art_s"
+    add "menu_particles"
+    if persistent.playthrough != 4:
+        add "menu_art_m"
+        add "menu_fade"
 
     if gui.show_name:
 
@@ -539,24 +558,6 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
-
-#    if not persistent.ghost_menu:
-    add "menu_particles"
-    add "menu_particles"
-    add "menu_particles"
-    add "menu_logo"
-#    if persistent.ghost_menu:
-#        add "menu_art_s_ghost"
-#        add "menu_art_m_ghost"
-#    else:
-#        if persistent.playthrough == 1 or persistent.playthrough == 2:
-#            add "menu_art_s_glitch"
-#        else:
-#            add "menu_art_s"
-    add "menu_particles"
-#        if persistent.playthrough != 4:
-    add "menu_art_m"
-    add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
 
@@ -1111,39 +1112,51 @@ style slider_vbox:
 ## https://www.renpy.org/doc/html/history.html
 
 screen history():
-
     tag menu
-
-    ## Avoid predicting this screen, as it can be very large.
     predict False
-
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
-
         style_prefix "history"
-
         for h in _history_list:
-
             window:
-
-                ## This lays things out properly if history_height is None.
                 has fixed:
                     yfit True
-
                 if h.who:
-
                     label h.who:
                         style "history_name"
-
-                        ## Take the color of the who text from the Character, if
-                        ## set.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
-
-                text h.what
-
+                $ what = filter_text_tags(h.what, allow=set([]))
+                text what:
+                    substitute False
         if not _history_list:
             label _("The dialogue history is empty.")
 
+python early:
+    import renpy.text.textsupport as textsupport
+    from renpy.text.textsupport import TAG, PARAGRAPH
+    def filter_text_tags(s, allow=None, deny=None):
+        if (allow is None) and (deny is None):
+            raise Exception("Only one of the allow and deny keyword arguments should be given to filter_text_tags.")
+        if (allow is not None) and (deny is not None):
+            raise Exception("Only one of the allow and deny keyword arguments should be given to filter_text_tags.")
+        tokens = textsupport.tokenize(unicode(s))
+        rv = [ ]
+        for tokentype, text in tokens:
+            if tokentype == PARAGRAPH:
+                rv.append("\n")
+            elif tokentype == TAG:
+                kind = text.partition("=")[0]
+                if kind and (kind[0] == "/"):
+                    kind = kind[1:]
+                if allow is not None:
+                    if kind in allow:
+                        rv.append("{" + text + "}")
+                else:
+                    if kind not in deny:
+                        rv.append("{" + text + "}")
+            else:
+                rv.append(text)
+        return "".join(rv)
 
 style history_window is empty
 
