@@ -25,8 +25,8 @@ init -200 python:
     skit_antileave = Skit(
         "Don't let Sayori leave, I swear to god!", # Set this to be the title of your skit.
         "no_leave", # Set this to be the label that you call below.
-        "@KarasilSothren#9772, /u/Karasilsothren",
-        "template_thumbnail" # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "template_thumbnail", # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
+        "@KarasilSothren#9772, /u/Karasilsothren"
     )
 
     skits.append(skit_antileave) # Add your skit to the list! Make sure it matches the name above.
