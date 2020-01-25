@@ -259,12 +259,9 @@ screen input(prompt):
     window:
 
         vbox:
-#            xpos gui.text_xpos
-#            xanchor 0.5
-#            ypos gui.text_ypos
-            xalign 0.5
-            yalign 0.5
-            spacing 30
+            xpos gui.text_xpos
+            xanchor 0.5
+            ypos gui.text_ypos
 
             text prompt style "input_prompt"
             input id "input"
@@ -447,13 +444,13 @@ screen navigation():
         if not persistent.autoload or not main_menu:
 
             if main_menu:
-
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
-                else:
-                    textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
-
-                    #textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                #Don't need/intend to change the play button like this.
+                #if persistent.playthrough == 1:
+                #    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
+                #else:
+                if config.developer:
+                    textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
 
             else:
 
@@ -1112,51 +1109,39 @@ style slider_vbox:
 ## https://www.renpy.org/doc/html/history.html
 
 screen history():
+
     tag menu
+
+    ## Avoid predicting this screen, as it can be very large.
     predict False
+
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
+
         style_prefix "history"
+
         for h in _history_list:
+
             window:
+
+                ## This lays things out properly if history_height is None.
                 has fixed:
                     yfit True
+
                 if h.who:
+
                     label h.who:
                         style "history_name"
+
+                        ## Take the color of the who text from the Character, if
+                        ## set.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
-                $ what = filter_text_tags(h.what, allow=set([]))
-                text what:
-                    substitute False
+
+                text h.what
+
         if not _history_list:
             label _("The dialogue history is empty.")
 
-python early:
-    import renpy.text.textsupport as textsupport
-    from renpy.text.textsupport import TAG, PARAGRAPH
-    def filter_text_tags(s, allow=None, deny=None):
-        if (allow is None) and (deny is None):
-            raise Exception("Only one of the allow and deny keyword arguments should be given to filter_text_tags.")
-        if (allow is not None) and (deny is not None):
-            raise Exception("Only one of the allow and deny keyword arguments should be given to filter_text_tags.")
-        tokens = textsupport.tokenize(unicode(s))
-        rv = [ ]
-        for tokentype, text in tokens:
-            if tokentype == PARAGRAPH:
-                rv.append("\n")
-            elif tokentype == TAG:
-                kind = text.partition("=")[0]
-                if kind and (kind[0] == "/"):
-                    kind = kind[1:]
-                if allow is not None:
-                    if kind in allow:
-                        rv.append("{" + text + "}")
-                else:
-                    if kind not in deny:
-                        rv.append("{" + text + "}")
-            else:
-                rv.append(text)
-        return "".join(rv)
 
 style history_window is empty
 
@@ -1599,6 +1584,30 @@ style notify_frame:
 
 style notify_text:
     size gui.notify_text_size
+
+
+screen scene_select():
+    #Note: Screens predict faster if you give them an empty parameter list - the ().
+    modal True #Make it so we can't dismiss the screen by clicking through it.
+    imagemap:
+        ground "bg/notebook.png" #Easiest way to set a background for a screen is imagemap - ground.
+    vpgrid: #Viewport + Grid.
+        cols 2
+        rows len(skits) #We want a row for every skit.
+        mousewheel True #This lets us scroll the viewport with the mousewheel.
+        scrollbars True #This puts a scrollbar on the side of the viewport.
+        side_xalign 0.5 #Because we have a scrollbar, we need side_xalign instead of xalign.
+        for i in range(len(skits)): #For every skit
+            imagebutton: #Make a button
+                idle skits[i].thumbnail #Idle image is the thumbnail
+                action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+                #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
+            text skits[i].name style "monika_text" #Next to the button, have text with the skit's name.
+init python:
+    #Cleanup function for scene_select screen
+    def scene_select_cleanup(label):
+        renpy.hide_screen("scene_select") #Hide the screen
+        renpy.call(label) #Call the picked label.
 
 screen credits_screen():
     tag menu
