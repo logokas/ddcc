@@ -1,6 +1,7 @@
 
 ## The Roast of the Moderator who calls themselves Weiss
 ## Copyright 2020 GanstaKingofSA. Permission is granted for additional roast material.
+## Thanks Nacho and Syner for suggestions on editing a few roasts!
 
 init -200 python:
     skit_zroast_hanaka = Skit(
