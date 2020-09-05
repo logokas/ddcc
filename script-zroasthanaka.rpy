@@ -54,7 +54,7 @@ label zroast_hanaka(preserve_transition=True):
     h "*rolls eyes* *smugs*"
     show hanaka at t22
     show monika at f21
-    m "Here's some advice, stop dreaming up a reality with her because it's going to be your final fantasy, and-"
+    m "{cps=25}Here's some advice, stop dreaming up a reality with her because it's going to be your final fantasy, and-{nw}{cps=25}"
     m 2h "Oh wait you don't know what that is either."
     m "Why don't you Google that instead of wishing for horse simulators in your diary?"
     show monika at t21
@@ -80,17 +80,17 @@ label zroast_hanaka(preserve_transition=True):
         l "So much comedy gold from our guest Monika."
     else:
         l "So much comedy cringe from our guest Monika."
+    play audio hml
     l "Wait. Where the heck did Hanaka go?"
     show monika at f21
     m 1d "Huh?"
-    m "Hanak-{nw}"
+    m "{cps=25}Hanak-{nw}{cps=25}"
     show monika at t21
     h "NERF THIS!"
     show monika 5b at t21
-    lm "AW SHI-{nw}"
+    lm "{cps=15}AW CRAP-{nw}{cps=15}"
     stop music
     scene bg psb
     play audio psbsfx
     $ pause(2.0)
     return
-
