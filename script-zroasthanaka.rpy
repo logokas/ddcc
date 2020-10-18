@@ -25,12 +25,12 @@ label zroast_hanaka(preserve_transition=True):
     l "Today we have someone everyone has to deal with on a day to day basis."
     l "{i}And the mod that calls himself Weiss almost everyday...{/i}"
     l "It's Hanaka!"
-    show hanaka 1 at t43b
-    h "*smug*"
+    show hanaka 1ss at t43b
+    h "*waves*"
     l "Alright! Let the show begin!"
     show monika 2b behind desk at f21
     show desk at f21
-    show hanaka at t43b
+    show hanaka 1 at t43b
     m "Thanks for having me here."
     m "Hanaka, I'm surprised you stayed two years in the community."
     m "Two years and you still haven't learned to grow up."
@@ -39,7 +39,7 @@ label zroast_hanaka(preserve_transition=True):
     play audio zhlaugh
     l "Ooh! Looks like things are about to get spicy!"
     show hanaka at f43b
-    h "*smug*"
+    h 1g "..."
     show hanaka at t43b
     show monika 2d at f21
     show desk at f21
@@ -50,6 +50,7 @@ label zroast_hanaka(preserve_transition=True):
     show monika at t21
     show desk at t21
     play audio zhlaugh
+    show hanaka 1p
     l "Ouch! Targetting his new waifu I see!"
     show monika at f21
     show desk at f21
@@ -58,7 +59,7 @@ label zroast_hanaka(preserve_transition=True):
     show monika at t21
     show desk at t21
     show hanaka at f43b
-    h "*rolls eyes* *smugs*"
+    h 1m "..."
     show hanaka at t43b
     show monika at f21
     show desk at f21
@@ -69,9 +70,9 @@ label zroast_hanaka(preserve_transition=True):
     show desk at t21
     play audio zhlaugh
     l "Oof! The comedy stream strikes a home run tonight!"
-    show hanaka at f43b
+    show hanaka 1ses at f43b
     h "*smirks*"
-    show hanaka at t43b
+    show hanaka 1s at t43b
     show monika 3m at f21
     show desk at f21
     m "Hanaka, who did your hair?"

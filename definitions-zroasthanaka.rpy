@@ -20,6 +20,13 @@ define lm = Character('Logo & Moni', what_prefix='"', what_suffix='"', ctc="ctc"
 define desk = DynamicCharacter('Desk', image='desk', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 image hanaka 1 = "mod_assets/zroasthanaka/hanaka.png"
+image hanaka 1g = "mod_assets/zroasthanaka/grin.png"
+image hanaka 1m = "mod_assets/zroasthanaka/mad.png"
+image hanaka 1ss = "mod_assets/zroasthanaka/slight smile.png"
+image hanaka 1ses = "mod_assets/zroasthanaka/shut eye smirk.png"
+image hanaka 1p = "mod_assets/zroasthanaka/pissed.png"
+image hanaka 1s = "mod_assets/zroasthanaka/smirk.png"
+
 image desk 1 = "mod_assets/zroasthanaka/zroasthanaka_ddlc_podium.png"
 
 image bg crf = "mod_assets/zroasthanaka/zroasthanaka_ddlc_bg.png"
