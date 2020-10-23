@@ -1587,22 +1587,32 @@ style notify_text:
 
 
 screen scene_select():
-    #Note: Screens predict faster if you give them an empty parameter list - the ().
-    modal True #Make it so we can't dismiss the screen by clicking through it.
+    key "mouseup_3" action NullAction
+    key "mouseup_2" action NullAction
+    modal True 
     imagemap:
-        ground "bg/notebook.png" #Easiest way to set a background for a screen is imagemap - ground.
-    vpgrid: #Viewport + Grid.
+        ground "bg/notebook.png"
+    vpgrid:
+        id "vp"
+        spacing 150
         cols 2
-        rows len(skits) #We want a row for every skit.
-        mousewheel True #This lets us scroll the viewport with the mousewheel.
-        scrollbars True #This puts a scrollbar on the side of the viewport.
-        side_xalign 0.5 #Because we have a scrollbar, we need side_xalign instead of xalign.
-        for i in range(len(skits)): #For every skit
-            imagebutton: #Make a button
-                idle skits[i].thumbnail #Idle image is the thumbnail
-                action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-                #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
-            text skits[i].name style "monika_text" #Next to the button, have text with the skit's name.
+        #rows len(skits)
+        mousewheel True
+        draggable True
+        #scrollbars True
+        side_xalign 0.2
+        for i in range(len(skits)):
+            vbox:
+                imagebutton:
+                    idle skits[i].thumbnail
+                    action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+                text skits[i].name style "monika_text" #Next to the button, have text with the skit's name.
+    textbutton "Back":
+        text_style "monika_text"
+        xalign 1.0 yalign 0.0
+        action MainMenu(confirm=True)
+    vbar value YScrollValue("vp") xpos 900
+
 init python:
     #Cleanup function for scene_select screen
     def scene_select_cleanup(label):
