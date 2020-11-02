@@ -1,6 +1,7 @@
 # Super Smash Bros for Natsuki
 # Written by u/ImTheRealSlayer (discord tag: ImTheRealSlayer#7976)
 # JoJo's Bizarre Adventure is property of Hirohiko Araki
+# Image of link being fucked (up by cloud, presumably) is property of me.
 
 image template_thumnail = "mod_assets/ssb4n/ssb4n_thumbnail.png"
 image bg ssb4n_final = "mod_assets/ssb4n/final.png"
@@ -35,29 +36,16 @@ label ssb4n(preserve_transition=True):
         # or through scene selection.
     
     play music t5
-
-    show monika 1 zorder 2 at t11
-    m "Okay, everyone! That concludes todays meeting! Remember to write a poem over the weekend, as we will be sharing them on Monday."
-    mc "Alright."
-    hide monika with dissolve
-    "I walk over to my bag and begin packing my things away."
-    mc "I wonder what I'll do when I get home."
-    mc "Heh, maybe some smash might be nice."
-    "I'm about to walk out the door, when..."
     show natsuki 1 zorder 2 at t11
     n "Hey [player]."
     mc "Hey Natsuki, what's up?"
-    n 5u "I was wondering..."
-    n "Well..."
-    n "If we could, y'know..."
+    n 5u "I was wondering... If we could, y'know..."
     mc "Y'know...?"
     stop music fadeout 1.0
     "She leans over to whisper in my ear"
     n 5s "If we could smash."
     "W-w-w-"
     "WHATTT??!!"
-    "Me? Natsuki? Smashing? This can't be real."
-    mc "W-What??"
     n 2w "You don't have to if you don't want to, but..."
     mc "No! I mean yes! It's fine!"
     stop music fadeout 1.0
@@ -66,15 +54,10 @@ label ssb4n(preserve_transition=True):
     mc "Yeah, my parents aren't home, so it'll be fine."
     n 1l "Alright, cool. Thanks [player]. See you tomorrow!"
     hide natsuki with dissolve
-    scene bg residential_day
+    scene black
     with wipeleft_scene
     
     play music t6
-    "I can't believe I'm gonna be smashing Natsuki!"
-    "I didn't realise she could be like that..."
-    "It's kinda kinky, if I'm honest."
-    "Better get some sleep, I wanna be ready for tomorrow!"
-    
     scene bg bedroom
     with wipeleft_scene
     mc "Today's the day! I'm finally gonna smash Natsuki!!"
@@ -97,10 +80,6 @@ label ssb4n(preserve_transition=True):
     mc "So, uh, what's in the bag?"
     show natsuki 1ba zorder 2 at t11
     n 4bb "Heh, it's a surprise. You'll find out {i}later{/i}."
-    n 4bq "Right now, I'm kinda thirsty. I need a drink."
-    "I walk over to the fridge and pull out a can of cola, then hand it to Natsuki."
-    n 1bz "Thanks, I needed something refreshing. Aren't you gonna have one?"
-    mc "Yeah, I'll have one after."
     mc "I'm just gonna go to the bedroom to get everything sorted. Come up when you're ready."
     n 1ba "Alright, I'll only be a minute."
     hide natsuki with dissolve
@@ -116,7 +95,7 @@ label ssb4n(preserve_transition=True):
     mc "Y-Yeah, come in!"
     stop music fadeout 2.0
     show natsuki 2 zorder 2 at t11
-    n ssb4n_gcn "Who's ready to sma-"
+    n ssb4n_gcn "Who's ready to sma-{nw}"
     play music t7
     n ssb4n_gcns "OH MY GOD!!"
     "I see natsuki walk in holding a gamecube controller her Snake amiibo."
@@ -169,6 +148,4 @@ label ssb4n(preserve_transition=True):
     with dissolve_scene_full
     "Natsuki ended up kicking [player]'s ass, as they were a mediocre Link main."
     "Natsuki wasn't able to use her Snake amiibo and resorted to playing against level 9 computers while [player] cried in the corner"
-
-
     return
