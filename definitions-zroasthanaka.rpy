@@ -1,16 +1,19 @@
 ## Definitions for Roast of Hanaka Skit
-## Hanaka - by kyoryii (duh) [Probably only allowed here]
+## Hanaka - by kyoryii (duh) [Only allowed in this skit]
 ## zroasthanaka_NS (psb) - Denelson83 by CC-BY-SA Unported 3.0 
 ## https://commons.wikimedia.org/wiki/File:SMPTE_Color_Bars.svg
 ## zroasthanaka_bleep.ogg (psbsfx) - Hughesj333 by CC-0
-## https://freesound.org/people/hughesj333/sounds/99202/
+## https://freesound.org/s/99202/
 ## zroasthanaka_aud_laugh.ogg (zhlaugh) - lonemonk by CC-BY-SA Unported 3.0 | edited by skit maker
-## https://freesound.org/people/lonemonk/sounds/72843/
+## https://freesound.org/s/72843/
+## zroasthanaka_clap.ogg (clap) - lonemonk by CC-BY-SA Unported 3.0 | edited by skit maker
+## https://freesound.org/s/72841/
 ## zroasthanaka_mech_load.wav (hml) - GregorQuendel, Paul368, danlucaz & Erokia | edited by Logokas
-## https://freesound.org/people/GregorQuendel/sounds/422116/ by CC-BY-SA Unported 3.0
-## https://freesound.org/people/Paul368/sounds/264063/ by CC-0
-## https://freesound.org/people/danlucaz/sounds/517754/ by CC-0
-## https://freesound.org/people/Erokia/sounds/417141/ by CC-BY-SA Unported 3.0
+## https://freesound.org/s/422116/ by CC-BY-SA Unported 3.0
+## https://freesound.org/s/264063/ by CC-0
+## https://freesound.org/s/517754/ by CC-0
+## https://freesound.org/s/417141/ by CC-BY-SA Unported 3.0
+## zroasthanaka_splosion.ogg (nerfthis) - Chiff the Oblivious#4251 | edited by skit maker
 ## zroasthanaka_ddlc_bg.png (crf) & zroasthanaka_ddlc_podium.png (desk) - Kimagure After (T.O.P) | edited by yagamirai01
 
 define h = DynamicCharacter('h_name', image='hanaka', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -36,6 +39,8 @@ image zroasthanaka_thumbnail = im.FactorScale("mod_assets/zroasthanaka/zroasthan
 define audio.psbsfx = "mod_assets/zroasthanaka/zroasthanaka_bleep.ogg"
 define audio.zhlaugh = "mod_assets/zroasthanaka/zroasthanaka_aud_laugh.ogg"
 define audio.hml = "mod_assets/zroasthanaka/zroasthanaka_mech_load.wav"
+define audio.nerfthis = "mod_assets/zroasthanaka/zroasthanaka_splosion.ogg"
+define audio.clap = "mod_assets/zroasthanaka/zroasthanaka_clap.ogg"
 
 transform t43b:
     tcommon(960)

@@ -8,7 +8,7 @@ init -200 python:
         "Roast of Hanaka", #Title
         "zroast_hanaka", #Label
         "zroasthanaka_thumbnail", #Thumbnail
-        "@GanstaKingofSA#0235, u/GanstaKingofSA" #Author
+        "GanstaKingofSA" #Author
     )
 
     skits.append(skit_zroast_hanaka)
@@ -26,6 +26,7 @@ label zroast_hanaka(preserve_transition=True):
     l "{i}And the mod that calls himself Weiss almost everyday...{/i}"
     l "It's Hanaka!"
     show hanaka 1ss at t43b
+    play audio clap
     h "*waves*"
     l "Alright! Let the show begin!"
     show monika 2b behind desk at f21
@@ -63,7 +64,7 @@ label zroast_hanaka(preserve_transition=True):
     show hanaka at t43b
     show monika at f21
     show desk at f21
-    m "{cps=25}Here's some advice, stop dreaming up a reality with her because it's going to be your final fantasy, and-{nw}{cps=25}"
+    m "{cps=28}Here's some advice, stop dreaming up a reality with her because it's going to be your final fantasy, and-{nw}{cps=28}"
     m 2h "Oh wait you don't know what that is either."
     m "Why don't you Google that instead of wishing for horse simulators in your diary?"
     show monika at t21
@@ -101,10 +102,12 @@ label zroast_hanaka(preserve_transition=True):
     m "{cps=25}Hanak-{nw}{cps=25}"
     show monika at t21
     show desk at t21
-    h "NERF THIS!"
+    play audio nerfthis
+    h "NERF{w=1.0}THIS!{w=1.0}{nw}"
     show monika 5b at t21
-    lm "{cps=15}AW CRA-{nw}{cps=15}"
+    lm "{cps=16}AW CRA-{nw}{cps=16}"
     stop music
+    stop audio
     scene bg psb
     play audio psbsfx
     $ pause(2.0)
