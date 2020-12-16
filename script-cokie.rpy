@@ -250,7 +250,7 @@ label script_cokie(preserve_transition=True):
         xoffset 900
         alpha 1
         ease 0.5 alpha 0
-    s "Thank you Natuski~!"
+    s "Thank you Natsuki~!"
     hide s1
     show layer master:
         subpixel True
