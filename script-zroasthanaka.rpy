@@ -103,9 +103,9 @@ label zroast_hanaka(preserve_transition=True):
     show monika at t21
     show desk at t21
     play audio nerfthis
-    h "NERF{w=1.0}THIS!{w=1.0}{nw}"
+    h "NERF{w=1.0} THIS!{w=1.0}{nw}"
     show monika 5b at t21
-    lm "{cps=16}AW CRA-{nw}{cps=16}"
+    lm "{cps=15}AW CRA-{nw}{cps=15}"
     stop music
     stop audio
     scene bg psb
