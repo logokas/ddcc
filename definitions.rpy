@@ -5,7 +5,7 @@
 
 
 define persistent.demo = False
-define persistent.steam = False
+define persistent.steam = ("steamapps" in config.basedir.lower())
 define config.developer = False
 
 python early:
