@@ -18,8 +18,7 @@
 
 define h = DynamicCharacter('h_name', image='hanaka', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 default h_name = "Hanaka"
-define l = Character('Logokas', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define lm = Character('Logo & Moni', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define lm = Character('You & Moni', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define desk = DynamicCharacter('Desk', image='desk', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 image hanaka 1 = "mod_assets/zroasthanaka/hanaka.png"
