@@ -1593,16 +1593,29 @@ screen scene_select():
         ground "bg/notebook.png" #Easiest way to set a background for a screen is imagemap - ground.
     vpgrid: #Viewport + Grid.
         cols 2
+        yoffset 50
+        ymaximum 660
+        spacing 5
         rows len(skits) #We want a row for every skit.
         mousewheel True #This lets us scroll the viewport with the mousewheel.
         scrollbars True #This puts a scrollbar on the side of the viewport.
-        side_xalign 0.5 #Because we have a scrollbar, we need side_xalign instead of xalign.
+        side_xalign 0.95 #Because we have a scrollbar, we need side_xalign instead of xalign.
         for i in range(len(skits)): #For every skit
             imagebutton: #Make a button
-                idle skits[i].thumbnail #Idle image is the thumbnail
+                idle At(skits[i].thumbnail, adjust_cover) #Idle image is the thumbnail
                 action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
+                xsize 590
                 #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
-            text skits[i].name style "monika_text" #Next to the button, have text with the skit's name.
+            text skits[i].name style "scene_select_text" yoffset i + 17
+    text "Python" style "monika_text" xpos 22 ypos 13 size 22
+    text "Music" style "monika_text" xpos 105 ypos 14 size 22 
+    text "Skit List" style "monika_text" xpos 175 ypos 14 size 22 color "#fff"
+
+style scene_select_text is monika_text:
+    xoffset -100 
+    xsize 250 
+    xfill True 
+
 init python:
     #Cleanup function for scene_select screen
     def scene_select_cleanup(label):
@@ -1627,3 +1640,6 @@ screen credits_screen():
                 text "Skit Author:"
                 text ""
                 text author_list
+
+transform adjust_cover:
+    size(223,126)
