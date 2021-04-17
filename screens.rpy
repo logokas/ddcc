@@ -1600,6 +1600,9 @@ screen scene_select():
         mousewheel True #This lets us scroll the viewport with the mousewheel.
         scrollbars True #This puts a scrollbar on the side of the viewport.
         side_xalign 0.95 #Because we have a scrollbar, we need side_xalign instead of xalign.
+
+        python:
+            skits = sorted(skits, key=lambda skits: skits.skit_position)
         for i in range(len(skits)): #For every skit
             imagebutton: #Make a button
                 idle At(skits[i].thumbnail, adjust_cover) #Idle image is the thumbnail

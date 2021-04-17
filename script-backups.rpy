@@ -5,7 +5,8 @@ init -200 python:
         "Good thing she keeps backups", # Title
         "backups", # Label
         "club_date", #Thumbnail
-        "@Chronos#1609, /u/chronoshag"
+        "@Chronos#1609, /u/chronoshag",
+        skit_position = 1
     )
 
     skits.append(skit_backups)

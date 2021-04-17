@@ -5,7 +5,8 @@ init -200 python:
         "The Missing Notebook",
         "terra_ddcc",
         "club_date",
-        "@Terra#2060, /u/wingedterra"
+        "@Terra#2060, /u/wingedterra",
+        skit_position = 5
     )
     skits.append(skit_template)
 

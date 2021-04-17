@@ -18,7 +18,8 @@ init -200 python:
         "Sayo-nara: Mania Adventures edition",
         "sayomania", 
         "sayori_room_date",
-        "@CPG Yuri - u/reconusm#1435"
+        "@CPG Yuri - u/reconusm#1435",
+        skit_position = 8
     )
 
     skits.append(skit_template)

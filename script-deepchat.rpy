@@ -3,7 +3,8 @@ init -200 python:
         "A Talk With The Club", # Title
         "club_talk", # Label
         "club_date", #Thumbnail
-        "@KarasilSothren#9772, /u/Karasilsothren"
+        "@KarasilSothren#9772, /u/Karasilsothren",
+        skit_position = 12
     )
 
     # skits.append(skit_club_talk)

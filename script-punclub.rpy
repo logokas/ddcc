@@ -14,7 +14,8 @@ init -200 python:
         "Pun Club",
         "punclub",
         "punclub_thumbnail",
-        "@VirtualKibou#0811, /u/VirtualKibou"
+        "@VirtualKibou#0811, /u/VirtualKibou",
+        skit_position = 6
     )
 
     skits.append(skit_punclub)

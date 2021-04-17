@@ -1416,10 +1416,11 @@ default natsuki_23 = None
 
 init -201 python:
     class Skit:
-        def __init__(self, name, call_label, thumbnail, author):
+        def __init__(self, name, call_label, thumbnail, author, skit_position):
             self.name = name
             self.call_label = call_label
             self.thumbnail = thumbnail
             self.author = author
+            self.skit_position = skit_position
     skits = []
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

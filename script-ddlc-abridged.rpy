@@ -5,7 +5,8 @@ init -200 python:
         "DDLC Abridged", # Title
         "ddlc_abridged", # Label
         "residential_day_date", #Thumbnail
-        "@Chronos#1609, /u/chronoshag"
+        "@Chronos#1609, /u/chronoshag",
+        skit_position = 0
     )
 
     skits.append(skit_ddlc_abridged)

@@ -35,7 +35,8 @@ init -200 python:
         "The Annoying Printer", 
         "script_printer", 
         "printer_thumbnail",
-        "/u/AinsleyHairyott"
+        "/u/AinsleyHairyott",
+        skit_position = 7
     )
 
     skits.append(skit_printer) 

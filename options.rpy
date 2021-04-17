@@ -8,7 +8,7 @@ define config.name = "Doki Doki Comedy Club 2"
 define gui.show_name = True
 
 # Version of the game
-define config.version = "0.1.0"
+define config.version = "1.0 (Hanaka)"
 
 # text placed on about screen
 define gui.about = _("")
@@ -66,7 +66,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/
 #
 # must be a literal string
-define config.save_directory = "DokiDokiComedyClub2"
+define config.save_directory = "SDC-DDCC2"
 
 # icon displayed on taskbar / dock
 define config.window_icon = "gui/window_icon.png"
@@ -150,6 +150,9 @@ init python:
     build.classify("game/**.txt","scripts") #All the .txt files in game
 
     # stuff to ignore
+    build.classify('ddcc_submission_guidelines.txt', None)
+    build.classify('.gitignore', None)
+    build.classify('.gitattributes', None)
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)

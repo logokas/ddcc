@@ -5,7 +5,8 @@ init -200 python:
         "External Monologue", # Title
         "external_monologue", # Label
         "club_date", #Thumbnail
-        "@Tormuse#9495, /u/Tormuse"
+        "@Tormuse#9495, /u/Tormuse",
+        skit_position = 3
     )
 
     skits.append(skit_external_monologue)

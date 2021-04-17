@@ -22,6 +22,7 @@ init -200 python:
         "ayuskit_label", # Label
         "ayuskit_thumbnail", # Thumbnail
         "PattAttack#3007", # Authors: PattAttack#3007 & SuperHatGuy#1795
+        skit_position = 13
     )
     skits.append(ayuskit_skit)
 

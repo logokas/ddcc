@@ -5,7 +5,8 @@ init -200 python:
         "What is DDCC?", # Title
         "ddcc", # Label
         "club_date", #Thumbnail
-        "The DDCC Team"
+        "The DDCC Team",
+        skit_position = 17
     )
 
 ## The Explanation

@@ -8,7 +8,8 @@ init -200 python:
         "The Roast of Hanaka", #Title
         "zroast_hanaka", #Label
         "zroasthanaka_thumbnail", #Thumbnail
-        "@GanstaKingofSA#0235, u/GanstaKingofSA" #Author
+        "@GanstaKingofSA#0235, u/GanstaKingofSA", #Author
+        skit_position = 16
     )
 
     skits.append(skit_zroast_hanaka)

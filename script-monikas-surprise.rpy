@@ -6,7 +6,8 @@ init -200 python:
         "Monika's Surprise", # Title
         "monikas_surprise", # Label
         "monika_room_date", #Thumbnail
-        "@Tormuse#9495, /u/Tormuse"
+        "@Tormuse#9495, /u/Tormuse",
+        skit_position = 4
     )
 
     skits.append(skit_monikas_surprise)

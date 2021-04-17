@@ -3,11 +3,9 @@ label start:
     stop music fadeout 1.5
 
     python:
+        skits = sorted(skits, key=lambda skits: skits.skit_position)
         for script in skits:
-            if script.call_label == "ddcc":
-                renpy.call_in_new_context(script.call_label, preserve_transition=True)
-            else:
-                renpy.call_in_new_context(script.call_label, preserve_transition=False)
+            renpy.call_in_new_context(script.call_label, preserve_transition=False)
             renpy.call_in_new_context("skit_transition")
 
     #TODO: call credits from _call_credits

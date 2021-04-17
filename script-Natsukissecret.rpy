@@ -10,7 +10,8 @@ init -200 python:
         "Natsuki's Secret",
         "NatsukisSecret",
         "NatsukisSecret_thumbnail",
-        "@Tormuse#9495, u/Tormuse"
+        "@Tormuse#9495, u/Tormuse",
+        skit_position = 15
     )
 
     skits.append(skit_NatsukisSecret)

@@ -3,7 +3,8 @@ init -200 python:
         "Don't Call A Tsundere Cute", # Title
         "natcute", # Label
         "club_date", #Thumbnail
-        "@KarasilSothren#9772, /u/Karasilsothren"
+        "@KarasilSothren#9772, /u/Karasilsothren",
+        skit_position = 11
     )
     skits.append(skit_nocallnatcute)
 
