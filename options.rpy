@@ -5,7 +5,7 @@
 define config.name = "Doki Doki Comedy Club 2"
 
 # True shows the name on main menu, False hides it
-define gui.show_name = True
+define gui.show_name = False
 
 # Version of the game
 define config.version = "1.0 (Hanaka)"

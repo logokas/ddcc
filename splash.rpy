@@ -16,7 +16,7 @@ init -100 python:
 init python:
     menu_trans_time = 1
     #The default splash message, originally shown in Act 1 and Act 4
-    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato."
+    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato or Logokas."
     #Optional splash messages, originally chosen at random in Act 2 and Act 3
     splash_messages = [
     "Please support Doki Doki Literature Club."
@@ -222,9 +222,9 @@ label splashscreen:
         scene tos
         with Dissolve(1.0)
         pause 1.0
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
+        "[config.name] or DDCC 2, is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato or the old Logokas DDCC project."
         "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
-        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
+        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at http://ddlc.moe or Steam."
         menu:
             "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
             "I agree.":
