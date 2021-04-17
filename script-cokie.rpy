@@ -241,7 +241,7 @@ label script_cokie(preserve_transition=True):
         subpixel True
         xtile 3
         zoom 1.4 xcenter 1125 ycenter 325
-        ease 0.5 zoom 1.25 xcenter 1225 ycenter 295
+        ease 0.5 zoom 1.25 xcenter 1275 ycenter 295
     show sayori 4a at i11:
         zoom 1.1 xcenter 900 ycenter 360
         xoffset 900
@@ -251,7 +251,7 @@ label script_cokie(preserve_transition=True):
         xoffset 900
         alpha 1
         ease 0.5 alpha 0
-    s "Thank you Natuski~!"
+    s "Thank you Natsuki~!"
     hide s1
     show layer master:
         subpixel True
@@ -259,7 +259,7 @@ label script_cokie(preserve_transition=True):
         ease_quad 0.5 xcenter -700 ycenter 450
     show bg club_day:
         subpixel True
-        zoom 1.25 xcenter 1225 ycenter 295
+        zoom 1.25 xcenter 1275 ycenter 295
         ease_quad 0.5 xcenter 1175 ycenter 305
     window hide(None)
     pause 0.5
@@ -528,6 +528,7 @@ label script_cokie(preserve_transition=True):
         easein_elastic 1 zoom 1.20 xcenter 1205 ycenter 295
     n 4x "Cookie Monster."
     
+    window hide(None)
     show layer master
     
     return

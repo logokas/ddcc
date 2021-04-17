@@ -6,7 +6,7 @@ init -200 python:
         "ddcc", # Label
         "club_date", #Thumbnail
         "The DDCC Team",
-        skit_position = 17
+        skit_position = 19
     )
 
 ## The Explanation

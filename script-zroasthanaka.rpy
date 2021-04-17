@@ -9,7 +9,7 @@ init -200 python:
         "zroast_hanaka", #Label
         "zroasthanaka_thumbnail", #Thumbnail
         "@GanstaKingofSA#0235, u/GanstaKingofSA", #Author
-        skit_position = 16
+        skit_position = 17
     )
 
     skits.append(skit_zroast_hanaka)

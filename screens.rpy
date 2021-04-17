@@ -1588,18 +1588,23 @@ style notify_text:
 
 screen scene_select():
     #Note: Screens predict faster if you give them an empty parameter list - the ().
+    key "mouseup_3" action NullAction
+    key "mouseup_2" action NullAction
     modal True #Make it so we can't dismiss the screen by clicking through it.
     imagemap:
         ground "bg/notebook.png" #Easiest way to set a background for a screen is imagemap - ground.
     vpgrid: #Viewport + Grid.
+        id "vp"
         cols 2
         yoffset 50
+        xoffset 75
         ymaximum 660
         spacing 5
         rows len(skits) #We want a row for every skit.
         mousewheel True #This lets us scroll the viewport with the mousewheel.
-        scrollbars True #This puts a scrollbar on the side of the viewport.
-        side_xalign 0.95 #Because we have a scrollbar, we need side_xalign instead of xalign.
+        draggable True
+        #scrollbars True #This puts a scrollbar on the side of the viewport.
+        side_xalign 0.2 #Because we have a scrollbar, we need side_xalign instead of xalign.
 
         python:
             skits = sorted(skits, key=lambda skits: skits.skit_position)
@@ -1610,9 +1615,17 @@ screen scene_select():
                 xsize 590
                 #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
             text skits[i].name style "scene_select_text" yoffset i + 17
+
+    #Decor
     text "Python" style "monika_text" xpos 22 ypos 13 size 22
     text "Music" style "monika_text" xpos 105 ypos 14 size 22 
     text "Skit List" style "monika_text" xpos 175 ypos 14 size 22 color "#fff"
+
+    textbutton "Back":
+        text_style "monika_text"
+        xalign 1.0 yalign 0.0
+        action MainMenu(confirm=True)
+    vbar value YScrollValue("vp") xpos 900
 
 style scene_select_text is monika_text:
     xoffset -100 
