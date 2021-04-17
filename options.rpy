@@ -8,7 +8,7 @@ define config.name = "Doki Doki Comedy Club 2"
 define gui.show_name = False
 
 # Version of the game
-define config.version = "1.0 (Hanaka)"
+define config.version = "1.0"
 
 # text placed on about screen
 define gui.about = _("")
