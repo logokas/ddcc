@@ -43,7 +43,7 @@ init python:
 
 
 
-
+define audio.ddcc_mm = "<loop 6.048>mod_assets/shared_assets/ddcc_mainmenu.ogg"
 define audio.t1 = "<loop 22.073>bgm/1.ogg"
 
 
@@ -1350,7 +1350,7 @@ default in_sayori_kill = None
 default in_yuri_kill = None
 default anticheat = 0
 define config.mouse = None
-default allow_skipping = True
+default allow_skipping = False
 default basedir = config.basedir
 default chapter = 0
 default currentpos = 0

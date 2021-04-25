@@ -7,7 +7,8 @@ label start:
         for script in skits:
             renpy.call_in_new_context(script.call_label, preserve_transition=False)
             renpy.call_in_new_context("skit_transition")
-
+        config.allow_skipping = True
+        renpy.notify("DDCC Completed")
     #TODO: call credits from _call_credits
     return
 
