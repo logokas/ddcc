@@ -58,8 +58,9 @@ screen scenechoice2:
 
 label choose:
     window hide
-    play music t4
     show screen scene_select()
+    with dissolve_scene_full
+    play music t4
     pause
     #scene bg notebook with Dissolve(0.5, alpha=True)
     #play music t4
