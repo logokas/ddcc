@@ -448,8 +448,7 @@ screen navigation():
                 #if persistent.playthrough == 1:
                 #    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
                 #else:
-                if config.developer:
-                    textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
+                textbutton _("Play") action If(persistent.playername, true=Start("choose"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="choose")))
                 textbutton _("Play All") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName, next_scene_name="start")))
 
             else:
@@ -1605,6 +1604,7 @@ screen scene_select():
         draggable True
         #scrollbars True #This puts a scrollbar on the side of the viewport.
         side_xalign 0.2 #Because we have a scrollbar, we need side_xalign instead of xalign.
+        ysize
 
         python:
             skits = sorted(skits, key=lambda skits: skits.skit_position)
@@ -1644,6 +1644,7 @@ screen credits_screen():
         python:
             title_list = []
             author_list = []
+            skits = sorted(skits, key=lambda skits: skits.skit_position)
             for x in skits:
                 title_list.append("\"" + x.name +"\"" +"\n")
                 author_list.append(x.author + "\n")
