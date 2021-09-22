@@ -132,7 +132,7 @@ label no_leave(preserve_transition=True): # Don't change the preserve_transition
     show sayori at t81
     mc "So there is no way out?"
     show sayori at t91
-    m "No and if there was I'm sure I could cover that one as well if I had too."
+    m "No and if there was I'm sure I could cover that one as well if I had to."
     show sayori at t101
     mc "Are you sure, because I am really worried about her."
     show sayori at t111

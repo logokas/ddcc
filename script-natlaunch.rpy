@@ -131,7 +131,7 @@ label natcute(preserve_transition=True):
     show natsuki 1a at t11
     hide screen tear
     "I walk in and see Nat."
-    mc "Hye cutie."
+    mc "Hey cutie."
     n 1q "I-I'm not cute."
     mc "But you so are, I mean look at you."
     show natsuki at t22
@@ -165,5 +165,5 @@ label natcute(preserve_transition=True):
     show sayori at t44
     show yuri at t41, behind monika
     m "Nope I am not dealing with this."
-    call screen dialog("Whe have launched Natsuki enough times.", ok_action=Return())
+    call screen dialog("We have launched Natsuki enough times.", ok_action=Return())
     return
