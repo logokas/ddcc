@@ -1602,19 +1602,20 @@ screen scene_select():
         rows len(skits) #We want a row for every skit.
         mousewheel True #This lets us scroll the viewport with the mousewheel.
         draggable True
-        #scrollbars True #This puts a scrollbar on the side of the viewport.
-        side_xalign 0.2 #Because we have a scrollbar, we need side_xalign instead of xalign.
-        ysize
 
         python:
             skits = sorted(skits, key=lambda skits: skits.skit_position)
         for i in range(len(skits)): #For every skit
             imagebutton: #Make a button
                 idle At(skits[i].thumbnail, adjust_cover) #Idle image is the thumbnail
-                action Function(scene_select_cleanup, skits[i].call_label) hover_sound "gui/sfx/hover.ogg" activate_sound "gui/sfx/select.ogg"
-                xsize 590
+                xsize 470
                 #When clicked, we're going to pass the skit's call label to our cleanup function. Buttons make sounds like DDLC buttons.
-            text skits[i].name style "scene_select_text" yoffset i + 17
+            textbutton skits[i].name:
+                text_style "scene_select_text" 
+                action Function(scene_select_cleanup, skits[i].call_label)
+                hover_sound "gui/sfx/hover.ogg" 
+                activate_sound "gui/sfx/select.ogg"
+                yoffset i + 14
 
     #Decor
     text "Python" style "monika_text" xpos 22 ypos 13 size 22
@@ -1622,15 +1623,23 @@ screen scene_select():
     text "Skit List" style "monika_text" xpos 175 ypos 14 size 22 color "#fff"
 
     textbutton "Back":
-        text_style "monika_text"
-        xalign 1.0 yalign 0.0
+        text_style "back_text"
+        xalign 0.99 yalign 0.01
+        hover_sound "gui/sfx/hover.ogg" 
+        activate_sound "gui/sfx/select.ogg"
         action MainMenu(confirm=True)
-    vbar value YScrollValue("vp") xpos 900
+    vbar value YScrollValue("vp") xpos 888 ypos 95 ysize 605
 
-style scene_select_text is monika_text:
-    xoffset -100 
-    xsize 250 
-    xfill True 
+style scene_select_text:
+    font "gui/font/m1.ttf"
+    size 33
+    outlines []
+    color "#000"
+    hover_outlines [(1, "#fef", 0, 0), (1, "#fcf", 0, 0), (1, "#faf", 0, 0)]
+
+style back_text is scene_select_text:
+    outlines [(3, "#fff", 0, 0), (2, "#fff", 0, 0), (1, "#fff", 0, 0)]
+    hover_outlines [(3, "#fef", 0, 0), (2, "#fcf", 0, 0), (1, "#faf", 0, 0)]
 
 init python:
     #Cleanup function for scene_select screen
@@ -1651,12 +1660,14 @@ screen credits_screen():
         hbox:
             vbox:
                 text "Skit Name:"
-                text ""
+                #text ""
                 text title_list
             vbox:
                 text "Skit Author:"
-                text ""
+                #text ""
                 text author_list
+        
+        text "Doki Doki Comedy Club 2 (DDCC 2) Copyright © 2021 GanstaKingofSA. All rights reserved. Individual skits submitted to DDCC 2 are copyrighted to their skit creators."
 
 transform adjust_cover:
     size(223,126)
