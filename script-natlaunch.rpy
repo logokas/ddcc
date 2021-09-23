@@ -131,6 +131,8 @@ label natcute(preserve_transition=True):
     scene bg club_day
     show natsuki 1a at t11
     hide screen tear
+    stop music
+    play music t3
     "I walk in and see Nat."
     mc "Hey cutie."
     n 1q "I-I'm not cute."
@@ -166,5 +168,6 @@ label natcute(preserve_transition=True):
     show sayori at t44
     show yuri at t41, behind monika
     m "Nope I am not dealing with this."
+    stop music
     call screen dialog("We have launched Natsuki enough times.", ok_action=Return())
     return
