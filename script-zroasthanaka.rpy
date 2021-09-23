@@ -30,7 +30,7 @@ label zroast_hanaka(preserve_transition=True):
     mc "Ladies and Gentleman!"
     mc "Welcome to the first ever DDMC Roast Stream!"
     mc "Today we have someone everyone has to deal with on a day to day basis."
-    mc "{i}And the mod that calls himself Weiss almost everyday...{/i}{w=0.05}{nw}"
+    mc "{i}And the admin that calls himself Weiss almost everyday...{/i}{w=0.05}{nw}"
     mc "It's Hanaka!"
     show hanaka 1ss at t43b
     play audio clap
