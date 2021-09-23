@@ -8,7 +8,7 @@ define config.name = "Doki Doki Comedy Club 2"
 define gui.show_name = False
 
 # Version of the game
-define config.version = "1.0"
+define config.version = "2.0"
 
 # text placed on about screen
 define gui.about = _("")
@@ -142,10 +142,11 @@ init python:
     build.package(build.directory_name + "Mod",'zip',build.name,description='DDCC')
 
     # archives to create
-    build.archive("scripts",build.name)
+    build.archive("scripts", build.name)
+    build.archive("mod_assets", build.name)
 
     # folder / files to put in archives
-    build.classify("game/mod_assets/**","scripts")
+    build.classify("game/mod_assets/**","mod_assets")
     build.classify('game/**.rpyc',"scripts")
     build.classify("game/**.txt","scripts") #All the .txt files in game
 
