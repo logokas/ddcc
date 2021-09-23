@@ -5,7 +5,7 @@
 # It's by Chiff the Oblivious#4251, and the background is surprisingly enough from the DDLC store.
 
 # If you don't want to use one of the original game's thumbnails (e.g. club_date, corridor_date, class_date), then define it here.
-image merchandise_thumnail = "mod_assets/merchandise/merchandise_thumbnail.png"
+image merchandise_thumbnail = "mod_assets/merchandise/merchandise_thumbnail.png"
 
 # First, we need to add our skit to the list of skits that the game looks at.
 init -200 python:
