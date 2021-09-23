@@ -1342,6 +1342,7 @@ default persistent.special_poems = None
 default persistent.clearall = None
 default persistent.menu_bg_m = None
 default persistent.first_load = None
+default persistent.ddcc_completed = False
 
 
 
@@ -1423,4 +1424,3 @@ init -201 python:
             self.author = author
             self.skit_position = skit_position
     skits = []
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

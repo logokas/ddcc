@@ -7,9 +7,10 @@ label start:
         for script in skits:
             renpy.call_in_new_context(script.call_label, preserve_transition=False)
             renpy.call_in_new_context("skit_transition")
-        config.allow_skipping = True
-        renpy.notify("DDCC Completed")
-    #TODO: call credits from _call_credits
+    
+    if not persistent.ddcc_complete:
+        call endgame
+    call endgame2
     return
 
 screen scenechoice1:
@@ -57,6 +58,7 @@ screen scenechoice2:
     textbutton "<<< Previous" action Jump("Choice2") xcenter .38 ycenter .95 style "monika_text" hover_sound "gui/sfx/hover.ogg" activate_sound "sfx/pageflip.ogg"
 
 label choose:
+    stop music fadeout 2.0
     window hide
     show screen scene_select()
     with dissolve_scene_full
@@ -81,3 +83,47 @@ label cleanJump:
    hide screen main_menu
    stop music fadeout 2.0
    #jump expression jumpLabel
+
+label endgame:
+    scene black
+    $ pause (1.0)
+    show hanaka 1g at t11
+    h "Sorry to keep you waiting!"
+    scene bg club_day
+    show hanaka 1g at t11
+    with dissolve_cg
+    h "Much better."
+    h 1ses "I just wanted to thank you for playing [config.name]!"
+    h 1m "I know this project has taken over three years to complete, but it's not my fault it is finally out the 4th anniversary of DDLC."
+    h 1g "A-Anyways."
+    h 1 "I hope you enjoyed all the skits that were made by the DDMC community!"
+    h 1g "Everyone put a lot of dedication towards these skits and appreciate everyone that submitted one to be part of DDMC history."
+    h 1 "Now that you reached the end, you might be wondering what to do next."
+    h "Why not play through everyone's skits again?"
+    h 1m "What? Is that not enough?"
+    h "Fine. Here."
+    $ pause (1.0)
+    $ persistent.ddcc_complete = True
+    $ renpy.notify("DDCC Completed")
+    h 1s "I added a special \"Play\" button in the game for you."
+    h "This will allow you to play through a skit of your choosing without going through the headache of playing every other skit."
+    h 1 "With that out of the way, thank you again for playing DDCC 2!"
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+    if list(set(process_list).intersection(stream_list)):
+        h 1s "But before you go, I have one last thing to say."
+        $ pause (1.0)
+        h 1g "Hi Influencer! Hi Everyone Else!"
+        h 1ses " Ahaha~. I always wanted to do that."
+    return
+
+# the end label of the game. Not the credits.    
+label endgame2(pause_length=4.0):
+    $ quick_menu = False
+    stop music fadeout 2.0
+    scene black
+    show end
+    with dissolve_scene_full
+    pause pause_length
+    $ quick_menu = True
+    return
+    

@@ -206,13 +206,14 @@ image tos2 = "bg/warning2.png"
 
 
 label splashscreen:
-    ## devmode check
-    default devmode = ['Devmode']
     python:
-        for x in devmode:
-            if player in devmode:
-                config.developer = True
-                renpy.notify('Developer Mode Enabled')
+        process_list = []
+        if renpy.windows:
+            try:
+                process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
+            except:
+                pass
+                
     #If this is the first time the game has been run, show a disclaimer
     default persistent.first_run = False
     if not persistent.first_run:
