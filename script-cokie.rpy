@@ -355,8 +355,8 @@ label script_cokie(preserve_transition=True):
         subpixel True
         zoom 1.2 xcenter 1205 ycenter 295
         easein_elastic 1 zoom 1.15 xcenter 1215 ycenter 285
-    n "NO!!"
     play music t7
+    n "NO!!"
     show layer master:
         subpixel True
         zoom 2.2 xcenter -1050 ycenter 575
