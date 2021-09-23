@@ -63,7 +63,8 @@ label script_cokie(preserve_transition=True):
         scene black
         with wipeleft
     
-    play music cokie_bgm01
+    #play music cokie_bgm01
+    play music t3
                                         # Developer Comments
     scene bg club_day:
         subpixel True           # this line is very recommended to make your animations move more smoother by using subpixel positioning instead of regular pixel positioning.
@@ -314,6 +315,7 @@ label script_cokie(preserve_transition=True):
     window show(None)
     s "Awww...! Please?"
     s "Just a bit..!"
+    stop music fadeout 2.0
     show natsuki 1x
     window hide(None)
     show layer master:
@@ -354,6 +356,7 @@ label script_cokie(preserve_transition=True):
         zoom 1.2 xcenter 1205 ycenter 295
         easein_elastic 1 zoom 1.15 xcenter 1215 ycenter 285
     n "NO!!"
+    play music t7
     show layer master:
         subpixel True
         zoom 2.2 xcenter -1050 ycenter 575
@@ -404,6 +407,7 @@ label script_cokie(preserve_transition=True):
         easein_quad 0.5 yoffset 10
     pause 1
     window show(None)
+    stop music fadeout 2.0
     n "{i}*Sigh*{/i}"
     show natsuki 1g at i11:
         subpixel True
@@ -414,6 +418,7 @@ label script_cokie(preserve_transition=True):
     with Dissolve(0.25)
     n "Alright, then."
     n 4a "It's yours, my friend."
+    play music t3
     window hide(None)
     show natsuki 4a at i11:
         subpixel True
