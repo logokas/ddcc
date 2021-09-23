@@ -30,10 +30,10 @@ label skit_transition:
     show bg transition_image zorder 4
     $ special_chance = renpy.random.randint(1, 100)
     if special_chance == 58:
-        play music transition1
-    else:
         play music special_tracks[renpy.random.randint(0,5)]
-    
+    else:
+        play music transition1
+        
     # While the music is playing, lets reset everything back to normal
     $ s_name = "Sayori"
     $ y_name = "Yuri"
