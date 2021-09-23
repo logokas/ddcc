@@ -1343,6 +1343,7 @@ default persistent.clearall = None
 default persistent.menu_bg_m = None
 default persistent.first_load = None
 default persistent.ddcc_completed = False
+default persistent.ddcc_single_menu = False
 
 
 

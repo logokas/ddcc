@@ -63,6 +63,9 @@ label choose:
     show screen scene_select()
     with dissolve_scene_full
     play music t4
+    if not persistent.ddcc_single_menu:
+        call screen dialog("Welcome to the DDCC Skit Menu!\n\nIn here you may pick any skit that was featured\nin DDCC 2!\n\nJust select the skit you want to play and experience\nthe skit all over again.", ok_action=Return())
+        $ persistent.ddcc_single_menu = True
     pause
     #scene bg notebook with Dissolve(0.5, alpha=True)
     #play music t4
