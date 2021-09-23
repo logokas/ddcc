@@ -4,7 +4,7 @@ init -200 python:
         "natcute", # Label
         "club_date", #Thumbnail
         "@KarasilSothren#9772, /u/Karasilsothren",
-        skit_position = 11
+        skit_position = 12
     )
     skits.append(skit_nocallnatcute)
 

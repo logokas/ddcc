@@ -6,7 +6,7 @@ init -200 python:
         "under_new_management", # Label
         "club_date", #Thumbnail
         "@Chronos#1609, /u/chronoshag",
-        skit_position = 3
+        skit_position = 2
     )
 
     skits.append(skit_management)

@@ -19,7 +19,7 @@ init -200 python:
         "sayomania", 
         "sayori_room_date",
         "@CPG Yuri - u/reconusm#1435",
-        skit_position = 8
+        skit_position = 10
     )
 
     skits.append(skit_template)

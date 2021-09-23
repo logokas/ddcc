@@ -27,7 +27,7 @@ init -200 python:
         "no_leave", # Set this to be the label that you call below.
         "template_thumbnail", # Set this to be the thumbnail you want for your skit. If you aren't using one from the original game, then you'll need to define its image.
         "@KarasilSothren#9772, /u/Karasilsothren",
-        skit_position = 14
+        skit_position = 15
     )
 
     skits.append(skit_antileave) # Add your skit to the list! Make sure it matches the name above.

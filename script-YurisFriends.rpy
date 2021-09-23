@@ -12,7 +12,7 @@ init -200 python:
         "YurisFriends",
         "YurisFriends_thumbnail",
         "@Tormuse#9495, u/Tormuse",
-        skit_position = 15
+        skit_position = 17
     )
 
     skits.append(skit_YurisFriends)
