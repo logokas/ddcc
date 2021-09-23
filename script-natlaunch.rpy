@@ -71,6 +71,7 @@ label natcute(preserve_transition=True):
     scene bg club_day
     if preserve_transition == True:
         with dissolve_scene_full
+    play music t3
     show natsuki 4a at t11
     "I walk into the club room seeing Nat waiting."
     mc "Hey cutie."
