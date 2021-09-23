@@ -1,6 +1,6 @@
 
-## The Roast of the Moderator who calls themselves Weiss
-## Copyright 2020 GanstaKingofSA. Permission is granted for additional roast material.
+## The Roast of the Moderator (now Admin) who calls themselves Weiss
+## Copyright 2020-2021 GanstaKingofSA.
 ## Thanks Nacho and Syner for suggestions on editing a few roasts!
 
 init -200 python:
@@ -16,10 +16,16 @@ init -200 python:
 
 label zroast_hanaka(preserve_transition=True):
     stop music fadeout 2.0
-    scene bg crf
-    show desk 1 at t21 zorder 3
+    scene black
     if preserve_transition == True:
         with dissolve_scene_full
+    $ pause (1.0)
+    "Disclaimer: The characters in this skit are all fictional, except Hanaka."
+    "Any resemblance to a actual persons' personality in this skit are merely coincidential."
+    $ pause(1.0)
+    scene bg crf
+    show desk 1 at t21 zorder 3
+    with dissolve_cg
     play music t2
     mc "Ladies and Gentleman!"
     mc "Welcome to the first ever DDMC Roast Stream!"
