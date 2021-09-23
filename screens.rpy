@@ -1646,6 +1646,7 @@ init python:
     #Cleanup function for scene_select screen
     def scene_select_cleanup(label):
         renpy.hide_screen("scene_select") #Hide the screen
+        renpy.music.stop(channel='music', fadeout=2.0)
         renpy.call(label) #Call the picked label.
 
 screen credits_screen():
