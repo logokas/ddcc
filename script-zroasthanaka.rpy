@@ -41,7 +41,7 @@ label zroast_hanaka(preserve_transition=True):
     show hanaka 1 at t43b
     m "Thanks for having me here."
     m "Hanaka, I'm surprised you stayed two years in the community."
-    m "Two years and you still haven't learned to grow up."
+    m "Three years and you still haven't learned to grow up."
     show monika at t21
     show desk at t21
     play audio zhlaugh
