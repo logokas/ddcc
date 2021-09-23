@@ -24,7 +24,7 @@ image merchandise_bg01 = "mod_assets/merchandise/merchandise_bg01.png"
 # Now, for the actual scene:
 label merchandise(preserve_transition=True): # Don't change the preserve_transition part, but rename "template" to what you want your label to be.
 
-    scene bg black # Whatever scene you want
+    scene black # Whatever scene you want
     if preserve_transition == True:
         with dissolve_scene_full
         # You can have whatever transition effects you want at the start of your script, as long as you put them in this if block.
