@@ -11,7 +11,7 @@ init -200 python:
         "stop", # Label
         "club_date", #Thumbnail
         "@Chronos#1609, /u/chronoshag",
-        skit_position = 2
+        skit_position = 3
     )
 
     skits.append(skit_stop)

@@ -6,7 +6,7 @@ init -200 python:
         "terra_ddcc",
         "club_date",
         "@Terra#2060, /u/wingedterra",
-        skit_position = 5
+        skit_position = 6
     )
     skits.append(skit_template)
 

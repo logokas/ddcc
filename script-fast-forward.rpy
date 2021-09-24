@@ -9,7 +9,7 @@ init -200 python:
         "fast_forward", # Label
         "fast-forward_thumbnail", # Thumbnail
         "@MrGraves#9413, /u/DiabloGraves", # Author
-        skit_position = 10
+        skit_position = 11
     )
 
     skits.append(skit_fast_forward) # Add your skit to the list! Make sure it matches the name above.

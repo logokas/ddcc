@@ -9,7 +9,7 @@ init -200 python:
         "zroast_hanaka", #Label
         "zroasthanaka_thumbnail", #Thumbnail
         "@GanstaKingofSA#0235, u/GanstaKingofSA", #Author
-        skit_position = 17
+        skit_position = 19
     )
 
     skits.append(skit_zroast_hanaka)
@@ -40,7 +40,7 @@ label zroast_hanaka(preserve_transition=True):
     show desk at f21
     show hanaka 1 at t43b
     m "Thanks for having me here."
-    m "Hanaka, I'm surprised you stayed two years in the community."
+    m "Hanaka, I'm surprised you stayed three years in the community."
     m "Three years and you still haven't learned to grow up."
     show monika at t21
     show desk at t21

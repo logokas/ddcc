@@ -36,7 +36,7 @@ init -200 python:
         "script_printer", 
         "printer_thumbnail",
         "/u/AinsleyHairyott",
-        skit_position = 7
+        skit_position = 9
     )
 
     skits.append(skit_printer) 

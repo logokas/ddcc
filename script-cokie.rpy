@@ -50,7 +50,7 @@ init -200 python:
         "script_cokie", 
         "cokie_thumbnail",
         "/u/AinsleyHairyott",
-        skit_position = 9
+        skit_position = 8
     )
 
     skits.append(skit_cokie)
